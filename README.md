@@ -7,8 +7,7 @@
 
 - [Brief](https://fed-vocational-astro-course.vercel.app/en/exam-1/brief)
 - [Design](_LINK_TO_FIGMA_)
-- [Production deploy](_LINK_TO_WEBSITE_)
-- [Deployment CI](_LINK_TO_NETLIFY_VERCEL_DASHBOARD_)
+- [Production deploy](https://traveller-andrea.netlify.app/)
 - [API Docs](_LINK_TO_API_DOCS_)
 - [API Endpoint](_LINK_TO_API_DOC)
 
