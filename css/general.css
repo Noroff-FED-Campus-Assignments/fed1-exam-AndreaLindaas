@@ -3,6 +3,7 @@
   --darkpurple: #913175;
   --purple: #cd5888;
   --grey: #e9e8e8;
+  --white: #fff;
 }
 body {
   margin: 0;
@@ -12,7 +13,7 @@ header {
   background-color: var(--black);
 }
 .logo {
-  color: #fff;
+  color: var(--white);
   font-family: "Dancing Script", cursive;
   font-size: 40px;
   margin-top: 14px;
@@ -21,10 +22,11 @@ header {
   display: grid;
   grid-template-columns: auto auto auto;
   height: 76px;
+  text-align: center;
 }
 .header-content i {
-  margin: 30px 0 0 30px;
-  color: #fff;
+  margin: 30px 0;
+  color: var(--white);
   font-size: 20px;
 }
 ul.menu-choices.show {
@@ -39,6 +41,62 @@ nav ul li {
   padding: 12px 16px;
 }
 nav ul li a {
-  color: #fff;
+  color: var(--white);
   text-decoration: none;
+}
+main div {
+  height: 300px;
+  color: var(--white);
+}
+footer {
+  background-color: var(--black);
+  height: 350px;
+}
+footer input {
+  border: 3px solid var(--darkpurple);
+  border-radius: 6px;
+  width: 70%;
+  height: 30px;
+}
+footer span,
+footer p {
+  color: var(--white);
+}
+footer p {
+}
+footer .input-email {
+  text-align: center;
+}
+.traveller-letter {
+  text-align: center;
+  padding: 35px 0 10px 0;
+}
+.text-footer {
+  font-size: 20px;
+}
+footer .traveller {
+  font-family: "Dancing Script", cursive;
+  font-size: 32px;
+}
+.icons-footer {
+  display: grid;
+  grid-template-columns: 52px 54px 31px;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 20px;
+  color: var(--white);
+  font-size: 30px;
+}
+
+.button-container {
+  text-align: center;
+  margin-top: 10px;
+  margin: 40px;
+}
+.buttons {
+  background-color: var(--darkpurple);
+  color: var(--white);
+  text-decoration: none;
+  border-radius: 6px;
+  padding: 10px 20px;
 }
