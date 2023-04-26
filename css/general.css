@@ -1,0 +1,44 @@
+:root {
+  --black: #000;
+  --darkpurple: #913175;
+  --purple: #cd5888;
+  --grey: #e9e8e8;
+}
+body {
+  margin: 0;
+}
+
+header {
+  background-color: var(--black);
+}
+.logo {
+  color: #fff;
+  font-family: "Dancing Script", cursive;
+  font-size: 40px;
+  margin-top: 14px;
+}
+.header-content {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  height: 76px;
+}
+.header-content i {
+  margin: 30px 0 0 30px;
+  color: #fff;
+  font-size: 20px;
+}
+ul.menu-choices.show {
+  display: block;
+  padding: 20px;
+}
+ul.menu-choices {
+  display: none;
+  list-style-type: none;
+}
+nav ul li {
+  padding: 12px 16px;
+}
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
