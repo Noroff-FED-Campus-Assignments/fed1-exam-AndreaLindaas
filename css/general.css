@@ -12,6 +12,7 @@ body {
 header {
   background-color: var(--black);
 }
+
 .logo {
   color: var(--white);
   font-family: "Dancing Script", cursive;
@@ -25,20 +26,28 @@ header {
   text-align: center;
 }
 .header-content i {
-  margin: 30px 0;
+  margin: 25px 0;
   color: var(--white);
   font-size: 30px;
 }
 div.search-bar.show {
   display: block;
+  background-color: black;
+  height: 60px;
+  text-align: center;
+  padding: 30px;
+}
+.search-bar.show input {
+  width: 50%;
+  height: 30px;
+  border-radius: 6px;
+  padding-left: 10px;
+  border: 3px solid var(--darkpurple);
 }
 div.search-bar {
   display: none;
 }
-div.search-bar input {
-  position: absolute;
-  right: 60px;
-}
+
 ul.menu-choices.show {
   display: block;
   padding: 20px;
