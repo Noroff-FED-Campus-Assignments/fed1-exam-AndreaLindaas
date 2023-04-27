@@ -46,17 +46,20 @@ input {
   padding-left: 10px;
   border: 3px solid var(--darkpurple);
 }
+input:focus {
+  outline-color: var(--darkpurple);
+}
 div.search-bar {
   display: none;
 }
 
 ul.menu-choices.show {
   display: block;
-  padding: 20px;
 }
 ul.menu-choices {
   display: none;
   list-style-type: none;
+  padding: 20px;
 }
 nav ul li {
   padding: 12px 16px;
@@ -107,8 +110,8 @@ footer .traveller {
   color: var(--white);
   font-size: 30px;
 }
-.icons-footer i:hover {
-  color: var(--darkpurple);
+.hover:hover {
+  color: var(--purple);
 }
 
 .button-container {
@@ -125,4 +128,28 @@ footer .traveller {
 }
 .buttons:hover {
   background-color: var(--purple);
+}
+@media screen and (min-width: 768px) {
+  header {
+    position: fixed;
+    height: 100%;
+    width: 200px;
+  }
+  ul.menu-choices {
+    display: block;
+  }
+  .menu-button,
+  .search-icon {
+    display: none;
+  }
+  .header-content {
+    display: block;
+    text-align: left;
+  }
+  main {
+    margin-left: 200px;
+  }
+  footer {
+    margin-left: 200px;
+  }
 }
