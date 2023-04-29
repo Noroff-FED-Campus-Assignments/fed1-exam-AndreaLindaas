@@ -2,7 +2,7 @@ const menuButton = document.querySelector(".menu-button");
 const menuChoices = document.querySelector(".menu-choices");
 
 const searchIcon = document.querySelector(".search-icon");
-const searchBar = document.querySelector(".search-bar");
+const searchBar = document.querySelector(".input");
 
 menuButton.onclick = function () {
   searchBar.classList.remove("show");
