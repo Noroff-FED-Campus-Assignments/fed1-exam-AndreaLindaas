@@ -86,10 +86,10 @@ nav ul li a {
   color: var(--white);
   text-decoration: none;
 }
-main div {
+/* main div {
   height: 300px;
   color: var(--white);
-}
+} */
 footer {
   background-color: var(--black);
   height: 350px;
@@ -125,8 +125,11 @@ footer .traveller {
   gap: 30px;
   justify-content: center;
   margin-top: 20px;
-  color: var(--white);
+
   font-size: 30px;
+}
+.icons-footer a i {
+  color: var(--white);
 }
 .hover:hover {
   color: var(--purple);
@@ -173,7 +176,7 @@ footer .traveller {
     display: block;
     text-align: center;
   }
-  .input input {
+  footer .input input {
     width: 40%;
   }
   .icons-header {

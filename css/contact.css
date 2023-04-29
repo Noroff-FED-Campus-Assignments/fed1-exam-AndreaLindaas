@@ -1,0 +1,29 @@
+:root {
+  --black: #000;
+  --darkpurple: #913175;
+  --purple: #cd5888;
+  --grey: #e9e8e8;
+  --white: #fff;
+}
+img {
+  width: 100%;
+}
+.heading {
+  background-color: var(--darkpurple);
+  height: 60px;
+  color: var(--white);
+  text-align: center;
+}
+h1 {
+  margin: -4px;
+  padding-top: 8px;
+}
+p {
+  margin: 25px;
+}
+span {
+  font-weight: bold;
+}
+form div {
+  margin: 20px auto;
+}
