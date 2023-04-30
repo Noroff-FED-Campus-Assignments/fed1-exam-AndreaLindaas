@@ -18,20 +18,18 @@ h1 {
   margin: -4px;
   padding-top: 8px;
 }
-p {
-  margin: 25px;
+.content {
+  margin: 30px;
 }
 span {
   font-weight: bold;
 }
 form div {
-  margin: 20px auto;
-  text-align: center;
+  width: 270px;
 }
 form label {
   display: block;
   text-align: left;
-  margin-left: 35px;
 }
 
 .input textarea {
@@ -39,4 +37,8 @@ form label {
   border-radius: 6px;
   width: 270px;
   height: 66px;
+}
+form .button-container {
+  margin-top: 40px;
+  text-align: left;
 }

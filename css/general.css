@@ -9,10 +9,10 @@ body {
   margin: 0;
   font-family: "Lato", sans-serif;
 }
-.menu-choices a:hover {
+/* .menu-choices a:hover {
   background-color: var(--purple);
-}
-
+} 
+denne trengs vel ikke. bare slett*/
 header {
   background-color: var(--black);
 }
@@ -39,7 +39,7 @@ header {
 }
 header div.input.show {
   display: block;
-  background-color: black;
+  background-color: var(--black);
   height: 60px;
   text-align: center;
   padding: 30px;
@@ -59,7 +59,10 @@ input:focus {
 header div.input {
   display: none;
 }
-
+header .input.show {
+  position: absolute;
+  width: 100%;
+}
 ul.menu-choices.show {
   display: block;
 }
@@ -68,15 +71,10 @@ ul.menu-choices {
   list-style-type: none;
   padding: 10px 20px;
 }
-ul.menu-choices a {
-  color: #fff;
-  padding: 8px 20px;
-  box-shadow: inset 0 0 0 0 var(--purple);
-  transition: ease-out 0.7s;
-}
-
-ul.menu-choices a:hover {
-  box-shadow: inset 400px 0 0 0 var(--purple);
+nav {
+  position: absolute;
+  background-color: var(--black);
+  width: 100%;
 }
 
 nav ul li {
@@ -93,6 +91,7 @@ nav ul li a {
 footer {
   background-color: var(--black);
   height: 365px;
+  margin-top: 80px;
 }
 .input input {
   border: 3px solid var(--darkpurple);
@@ -119,6 +118,9 @@ footer .traveller {
   font-family: "Dancing Script", cursive;
   font-size: 32px;
 }
+footer .button-container {
+  margin: 40px;
+}
 .icons-footer {
   display: grid;
   grid-template-columns: 52px 54px 31px;
@@ -131,14 +133,9 @@ footer .traveller {
 .icons-footer a i {
   color: var(--white);
 }
-.hover:hover {
-  color: var(--purple);
-}
 
 .button-container {
   text-align: center;
-  margin-top: 10px;
-  margin: 40px;
 }
 .buttons {
   background-color: var(--darkpurple);
@@ -162,6 +159,19 @@ footer .traveller {
   .menu-button,
   .search-icon {
     display: none;
+  }
+  .hover:hover {
+    color: var(--purple);
+  }
+  ul.menu-choices a {
+    color: #fff;
+    padding: 8px 20px;
+    box-shadow: inset 0 0 0 0 var(--purple);
+    transition: ease-out 0.7s;
+  }
+
+  ul.menu-choices a:hover {
+    box-shadow: inset 400px 0 0 0 var(--purple);
   }
   .header-content {
     display: block;
