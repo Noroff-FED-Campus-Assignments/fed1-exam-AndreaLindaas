@@ -26,4 +26,17 @@ span {
 }
 form div {
   margin: 20px auto;
+  text-align: center;
+}
+form label {
+  display: block;
+  text-align: left;
+  margin-left: 35px;
+}
+
+.input textarea {
+  border: 3px solid var(--darkpurple);
+  border-radius: 6px;
+  width: 270px;
+  height: 66px;
 }

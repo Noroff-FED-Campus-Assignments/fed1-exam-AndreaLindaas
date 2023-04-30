@@ -92,12 +92,12 @@ nav ul li a {
 } */
 footer {
   background-color: var(--black);
-  height: 350px;
+  height: 365px;
 }
 .input input {
   border: 3px solid var(--darkpurple);
   border-radius: 6px;
-  width: 70%;
+  width: 270px;
   height: 30px;
 }
 footer span,
@@ -175,6 +175,9 @@ footer .traveller {
   header div.input {
     display: block;
     text-align: center;
+  }
+  header .input input {
+    width: 160px;
   }
   footer .input input {
     width: 40%;
