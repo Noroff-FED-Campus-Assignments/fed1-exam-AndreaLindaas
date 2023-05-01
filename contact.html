@@ -68,27 +68,42 @@
             the contact form below.
           </p>
         </div>
-        <form>
-          <div class="input">
-            <label for="name">Name</label>
-            <input type="text" name="name" id="name" />
+        <div>
+          <form id="form">
+            <div>
+              <div class="input">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" />
+              </div>
+              <div class="input">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" />
+              </div>
+              <div class="input">
+                <label for="subject">Subject</label>
+                <input type="text" name="subject" id="subject" />
+              </div>
+              <div class="input">
+                <label for="">Message</label>
+                <textarea id="message" name="message"></textarea>
+              </div>
+            </div>
+            <div class="error-center">
+              <ul class="error-messages"></ul>
+            </div>
+
+            <div class="button-container">
+              <button type="submit" class="buttons">Send</button>
+              <button type="reset">Clear form</button>
+            </div>
+          </form>
+        </div>
+        <div class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Form submitted successfully. Thank you!</p>
           </div>
-          <div class="input">
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" />
-          </div>
-          <div class="input">
-            <label for="subject">Subject</label>
-            <input type="text" name="subject" id="subject" />
-          </div>
-          <div class="input">
-            <label for="">message</label>
-            <textarea id="message" name="message"></textarea>
-          </div>
-          <div class="button-container">
-            <a href="#" class="buttons">Send</a>
-          </div>
-        </form>
+        </div>
       </div>
     </main>
     <footer>
@@ -110,7 +125,7 @@
         <a href="#"><i class="fa-brands fa-facebook hover"></i></a>
       </div>
     </footer>
-    <script src="js/index.js"></script>
+    <script src="js/contact.js"></script>
     <script src="js/general.js"></script>
   </body>
 </html>

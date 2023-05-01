@@ -8,6 +8,7 @@
 body {
   margin: 0;
   font-family: "Lato", sans-serif;
+  background-color: var(--grey);
 }
 /* .menu-choices a:hover {
   background-color: var(--purple);
@@ -56,6 +57,9 @@ input {
 input:focus {
   outline-color: var(--darkpurple);
 }
+textarea:focus {
+  outline-color: var(--darkpurple);
+}
 header div.input {
   display: none;
 }
@@ -88,17 +92,30 @@ nav ul li a {
   height: 300px;
   color: var(--white);
 } */
+.heading {
+  background-color: var(--darkpurple);
+  height: 60px;
+  color: var(--white);
+  line-height: 60px;
+  padding-left: 30px;
+}
+h1 {
+  margin: -4px;
+  font-weight: normal;
+}
 footer {
   background-color: var(--black);
   height: 365px;
   margin-top: 80px;
 }
+
 .input input {
   border: 3px solid var(--darkpurple);
   border-radius: 6px;
   width: 270px;
   height: 30px;
 }
+
 footer span,
 footer p {
   color: var(--white);
@@ -143,6 +160,7 @@ footer .button-container {
   text-decoration: none;
   border-radius: 6px;
   padding: 10px 20px;
+  border: none;
 }
 .buttons:hover {
   background-color: var(--purple);
@@ -177,6 +195,9 @@ footer .button-container {
     display: block;
     text-align: left;
     margin: 20px 30px;
+  }
+  nav {
+    position: static;
   }
   nav ul li {
     padding: 18px 16px;
