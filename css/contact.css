@@ -6,9 +6,7 @@
   --white: #fff;
   --red: #f60606;
 }
-img {
-  width: 100%;
-}
+
 .image-header {
   background-image: url("../media/images/sara2.jpg");
   height: 200px;

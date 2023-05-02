@@ -1,0 +1,38 @@
+:root {
+  --black: #000;
+  --darkpurple: #913175;
+  --purple: #cd5888;
+  --grey: #e9e8e8;
+  --white: #fff;
+  --red: #f60606;
+}
+.image-header {
+  background-image: url("../media/images/circles.jpg");
+  height: 200px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+ul {
+  padding: 0;
+}
+ul li {
+  list-style-type: none;
+}
+.card {
+  background-color: var(--darkpurple);
+  width: 80%;
+  text-align: center;
+  padding: 8px 0;
+  margin: 30px auto;
+  color: var(--white);
+}
+img.featured-image {
+  width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+}
+@media screen and (min-width: 768px) {
+  .image-header {
+    height: 400px;
+  }
+}
