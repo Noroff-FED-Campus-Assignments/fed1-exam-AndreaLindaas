@@ -9,7 +9,12 @@
 img {
   width: 100%;
 }
-
+.image-header {
+  background-image: url("../media/images/sara2.jpg");
+  height: 200px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 .content {
   margin: 30px;
 }
@@ -79,6 +84,10 @@ form .button-container {
   cursor: pointer;
 }
 @media screen and (min-width: 768px) {
+  .image-header {
+    height: 400px;
+  }
+
   .modal .modal-content {
     width: 500px;
   }

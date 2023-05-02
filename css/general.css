@@ -92,6 +92,7 @@ nav ul li a {
   height: 300px;
   color: var(--white);
 } */
+
 .heading {
   background-color: var(--darkpurple);
   height: 60px;
@@ -100,7 +101,7 @@ nav ul li a {
   padding-left: 30px;
 }
 h1 {
-  margin: -4px;
+  margin-top: -4px;
   font-weight: normal;
 }
 footer {
