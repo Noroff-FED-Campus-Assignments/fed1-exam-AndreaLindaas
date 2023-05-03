@@ -22,9 +22,11 @@ ul li {
   background-color: var(--darkpurple);
   width: 80%;
   text-align: center;
-  padding: 8px 0;
   margin: 30px auto;
   color: var(--white);
+}
+.card div {
+  padding-bottom: 12px;
 }
 img.featured-image {
   width: 100%;

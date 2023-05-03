@@ -13,8 +13,7 @@ getBlogPosts();
 function showBlogPosts(blogposts) {
   for (let i = 0; i < blogposts.length; i++) {
     console.log(blogposts[i].title.rendered);
-    const title = `<li><div class="card"><img src="${blogposts[i]._embedded["wp:featuredmedia"]["0"].source_url}" class="featured-image"/><div>${blogposts[i].title.rendered}</div></div></li>`;
+    const title = `<li><a href="blogpost.html?id=${blogposts[i].id}"><div class="card"><img src="${blogposts[i]._embedded["wp:featuredmedia"]["0"].source_url}" class="featured-image"/><div>${blogposts[i].title.rendered}</div></div></a></li>`;
     blogpostHtml.innerHTML += title;
   }
 }
-//._embedded['wp:featuredmedia']['0'].source_url
