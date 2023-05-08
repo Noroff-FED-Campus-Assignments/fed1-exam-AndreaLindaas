@@ -1,0 +1,10 @@
+.content img {
+  max-width: 600px;
+  height: auto;
+}
+.post figure {
+  margin: 0;
+}
+.post p {
+  max-width: 600px;
+}
