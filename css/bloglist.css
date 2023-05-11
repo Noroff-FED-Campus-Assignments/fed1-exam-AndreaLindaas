@@ -18,13 +18,7 @@ ul {
 ul li {
   list-style-type: none;
 }
-.card {
-  background-color: var(--darkpurple);
-  width: 80%;
-  text-align: center;
-  margin: 30px auto;
-  color: var(--white);
-}
+
 .card div {
   padding-bottom: 12px;
 }

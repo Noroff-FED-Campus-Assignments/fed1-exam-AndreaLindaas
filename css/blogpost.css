@@ -2,9 +2,14 @@
   max-width: 600px;
   height: auto;
 }
+.post img {
+  max-width: 100%;
+}
 .post figure {
   margin: 0;
 }
 .post p {
   max-width: 600px;
+}
+@media screen and (min-width: 768px) {
 }

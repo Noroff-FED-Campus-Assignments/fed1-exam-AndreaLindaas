@@ -176,6 +176,13 @@ footer .button-container {
 .buttons:hover {
   background-color: var(--purple);
 }
+.card {
+  background-color: var(--darkpurple);
+  width: 80%;
+  text-align: center;
+  margin: 30px auto;
+  color: var(--white);
+}
 @media screen and (min-width: 768px) {
   header {
     position: fixed;
