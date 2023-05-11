@@ -4,9 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Home</title>
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/carousel.css" />
     <script
       src="https://kit.fontawesome.com/a63e3bd4b5.js"
       crossorigin="anonymous"
@@ -60,6 +61,27 @@
     </header>
     <main>
       <div class="image-header"></div>
+      <div class="image-text">
+        <h2>A travel blog for inspiration for others.</h2>
+        <p>
+          Travel can be one of the most inspiring experiences a person can have.
+          Whether it's exploring new cultures, immersing oneself in natural
+          landscapes, or discovering historical landmarks, travel has a way of
+          expanding one's perspective and igniting a sense of curiosity and
+          wonder.
+        </p>
+      </div>
+      <!-- This code is copied from https://codepen.io/tutsplus/pen/XWZqGgX -->
+      <section class="slider-wrapper">
+        <button class="slide-arrow" id="slide-arrow-prev">&#8249;</button>
+        <button class="slide-arrow" id="slide-arrow-next">&#8250;</button>
+        <ul class="slides-container" id="slides-container">
+          <!-- <li class="slide"></li>
+          <li class="slide"></li>
+          <li class="slide"></li>
+          <li class="slide"></li> -->
+        </ul>
+      </section>
       <div class="home-page"></div>
     </main>
     <footer>
@@ -89,5 +111,6 @@
     </footer>
     <script src="js/index.js"></script>
     <script src="js/general.js"></script>
+    <script src="js/carousel.js"></script>
   </body>
 </html>
