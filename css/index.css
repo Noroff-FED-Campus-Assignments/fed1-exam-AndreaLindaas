@@ -1,12 +1,20 @@
+:root {
+  --black: #000;
+  --darkpurple: #913175;
+  --purple: #cd5888;
+  --grey: #e9e8e8;
+  --white: #fff;
+}
 h2 {
   margin: 30px 30px 0 30px;
 }
 .image-text h2 {
   padding-top: 20px;
 }
+
 div.image-text {
-  background-color: white;
-  margin: 0 30px;
+  background-color: var(--white);
+  margin: 30px;
 }
 .home-page img {
   width: 100%;
@@ -20,4 +28,17 @@ div.image-text {
 p {
   max-width: 600px;
   padding: 0 30px 20px 30px;
+}
+@media screen and (min-width: 768px) {
+  div.image-text {
+    margin: 0 auto;
+    width: 500px;
+    position: absolute;
+    top: 324px;
+    left: 230px;
+    right: 0;
+  }
+  .image-header {
+    margin-bottom: 200px;
+  }
 }

@@ -19,7 +19,7 @@ async function showFeaturedImage() {
 
   const response = await fetch(url);
   const result = await response.json();
-
+  console.log(result);
   feaImage.style.backgroundImage = `url(${result._embedded["wp:featuredmedia"]["0"].source_url})`;
 }
 showFeaturedImage();
