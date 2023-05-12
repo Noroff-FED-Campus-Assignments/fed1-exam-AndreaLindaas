@@ -31,4 +31,8 @@ img.featured-image {
   .image-header {
     height: 400px;
   }
+  ul.posts {
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
 }

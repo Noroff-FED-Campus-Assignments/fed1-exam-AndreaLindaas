@@ -3,8 +3,6 @@ let slide;
 const prevButton = document.querySelector("#slide-arrow-prev");
 const nextButton = document.querySelector("#slide-arrow-next");
 
-/*test*/
-
 nextButton.addEventListener("click", () => {
   const slideWidth = slide.clientWidth;
   slidesContainer.scrollLeft += slideWidth;
@@ -29,7 +27,7 @@ function showPosts(blogposts) {
     console.log(blogposts[i].title.rendered);
 
     const title = `<li class="slide" style="background-image: url(${blogposts[i]._embedded["wp:featuredmedia"]["0"].source_url})">
-    <a href="blogpost.html?id=${blogposts[i].id}"><div>${blogposts[i].title.rendered}</div>
+    <a href="blogpost.html?id=${blogposts[i].id}"><div class="card-title"><p>${blogposts[i].title.rendered}</p></div>
     </a></li>`;
     slidesContainer.innerHTML += title;
   }

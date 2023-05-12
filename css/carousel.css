@@ -1,3 +1,10 @@
+:root {
+  --black: #000;
+  --darkpurple: #913175;
+  --purple: #cd5888;
+  --grey: #e9e8e8;
+  --white: #fff;
+}
 /*This code is copied from https://codepen.io/tutsplus/pen/XWZqGgX*/
 * {
   box-sizing: border-box;
@@ -34,7 +41,7 @@ body {
   bottom: 0;
   margin: auto;
   height: 4rem;
-  background-color: white;
+  background-color: var(--white);
   border: none;
   width: 2rem;
   font-size: 3rem;
@@ -73,6 +80,17 @@ body {
   display: grid;
   grid-template-columns: auto 200px;
 }
+
+/* div.card-title {
+  background: var(--darkpurple);
+  width: 99px;
+  color: var(--white);
+  text-align: center;
+}
+
+div.card-title p {
+  padding: 5px;
+} */
 
 @media screen and (min-width: 768px) {
   .slide {
