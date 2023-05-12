@@ -1,19 +1,18 @@
-const url = "https://traveller-api.lindaas.net/wp-json/wp/v2/pages/35";
-const homePage = document.querySelector(".home-page");
+const url = "https://traveller-api.lindaas.net/wp-json/wp/v2/pages/76";
+const about = document.querySelector(".about");
 
-async function getHomePage() {
+async function getAboutPage() {
   const response = await fetch(url);
   const result = await response.json();
 
-  showHomePage(result);
+  showAboutPage(result);
 }
 
-function showHomePage(home) {
-  homePage.innerHTML = home.content.rendered;
+function showAboutPage(home) {
+  about.innerHTML = home.content.rendered;
 }
-
 async function showFeaturedImage() {
-  const url = "https://traveller-api.lindaas.net/wp-json/wp/v2/pages/35?_embed";
+  const url = "https://traveller-api.lindaas.net/wp-json/wp/v2/pages/76?_embed";
 
   const featuredImage = document.querySelector(".image-header");
 
@@ -23,4 +22,4 @@ async function showFeaturedImage() {
   featuredImage.style.backgroundImage = `url(${result._embedded["wp:featuredmedia"]["0"].source_url})`;
 }
 showFeaturedImage();
-getHomePage();
+getAboutPage();

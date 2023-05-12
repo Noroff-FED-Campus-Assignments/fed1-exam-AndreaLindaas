@@ -26,11 +26,6 @@ div.image-text {
   padding-bottom: 10px;
 }
 
-p {
-  max-width: 600px;
-  padding: 0 30px 20px 30px;
-}
-
 @media screen and (min-width: 768px) {
   div.image-text {
     margin: 0 auto;
