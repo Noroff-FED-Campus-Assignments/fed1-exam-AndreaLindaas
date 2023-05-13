@@ -27,7 +27,7 @@ function showPosts(blogposts) {
     console.log(blogposts[i].title.rendered);
 
     const title = `<li class="slide" style="background-image: url(${blogposts[i]._embedded["wp:featuredmedia"]["0"].source_url})">
-    <a href="blogpost.html?id=${blogposts[i].id}"><div class="card-title"><p>${blogposts[i].title.rendered}</p></div>
+    <a href="blogpost.html?id=${blogposts[i].id}"><div class="date"><div class="month">April</div><div class="day">15</div><div class="year">2022</div></div><div class="card-title"><p>${blogposts[i].title.rendered}</p></div>
     </a></li>`;
     slidesContainer.innerHTML += title;
   }
