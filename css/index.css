@@ -11,10 +11,13 @@ h2 {
 .image-text h2 {
   padding-top: 20px;
 }
+.home-page h2 {
+  text-align: center;
+}
 
 div.image-text {
   background-color: var(--white);
-  margin: 30px;
+  margin: 70px 30px 30px;
 }
 .home-page img {
   width: 100%;
@@ -24,6 +27,14 @@ div.image-text {
 }
 .home-page figcaption {
   padding-bottom: 10px;
+}
+main div.button-container {
+  margin: -62px auto 0px;
+}
+.button-container.read-more {
+  margin: 20px;
+  position: inherit;
+  width: auto;
 }
 
 @media screen and (min-width: 768px) {
@@ -37,5 +48,13 @@ div.image-text {
   }
   .image-header {
     margin-bottom: 200px;
+  }
+  main div.button-container {
+    position: absolute;
+    top: 250px;
+    margin: 0 auto;
+    width: 114px;
+    right: 0;
+    left: 230px;
   }
 }

@@ -24,8 +24,13 @@ header {
   font-size: 40px;
   margin-top: 14px;
 }
+a {
+  text-decoration: none;
+  color: var(--white);
+}
 div.header-content a {
   text-decoration: none;
+  line-height: 80px;
 }
 .header-content {
   display: grid;
@@ -184,7 +189,7 @@ footer .button-container {
   background-color: var(--darkpurple);
   width: 80%;
   text-align: center;
-  margin: 30px auto;
+
   color: var(--white);
 }
 @media screen and (min-width: 768px) {

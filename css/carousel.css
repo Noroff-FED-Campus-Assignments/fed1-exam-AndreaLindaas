@@ -26,7 +26,7 @@ body {
 .slides-container {
   width: 100%;
   display: flex;
-  overflow: scroll;
+  overflow: hidden;
   scroll-behavior: smooth;
   list-style: none;
   margin: 0;
@@ -49,6 +49,7 @@ body {
   cursor: pointer;
   opacity: 0.5;
   transition: opacity 100ms;
+  z-index: 1;
 }
 
 .slide-arrow:hover,
@@ -59,13 +60,11 @@ body {
 #slide-arrow-prev {
   left: 0;
   padding-left: 0.25rem;
-  border-radius: 0 2rem 2rem 0;
 }
 
 #slide-arrow-next {
   right: 0;
   padding-left: 0.75rem;
-  border-radius: 2rem 0 0 2rem;
 }
 
 .slide {
@@ -75,22 +74,18 @@ body {
   background-size: cover;
   background-position: center;
 }
-
-.slide a {
-  display: grid;
-  grid-template-columns: auto 200px;
+li.slide {
+  position: relative;
 }
-
-/* div.card-title {
+div.card-title {
   background: var(--darkpurple);
-  width: 99px;
-  color: var(--white);
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+.card-title p {
   text-align: center;
 }
-
-div.card-title p {
-  padding: 5px;
-} */
 
 @media screen and (min-width: 768px) {
   .slide {
