@@ -53,6 +53,7 @@ body {
 .slide-arrow:hover,
 .slide-arrow:focus {
   opacity: 1;
+  color: var(--darkpurple);
 }
 
 #slide-arrow-prev {
@@ -91,5 +92,6 @@ div.card-title {
   }
   .slider-wrapper {
     margin: 0 auto;
+    margin-bottom: 58px;
   }
 }

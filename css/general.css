@@ -196,13 +196,15 @@ footer .button-container {
 }
 .date {
   background-color: var(--darkpurple);
-  width: 50px;
+  width: 60px;
   color: var(--white);
   text-align: center;
   position: absolute;
   top: 0;
   left: 0;
+  padding: 2px;
 }
+
 @media screen and (min-width: 768px) {
   header {
     position: fixed;
@@ -257,6 +259,11 @@ footer .button-container {
   .content {
     margin: 50px;
   }
+  .content figure img {
+    width: 50%;
+    height: auto;
+  }
+
   footer .input input {
     width: 40%;
   }

@@ -20,6 +20,7 @@ h2 {
 }
 .home-page h2 {
   text-align: center;
+  margin-bottom: 20px;
 }
 
 div.image-text {
@@ -29,8 +30,10 @@ div.image-text {
 .home-page img {
   width: 100%;
   height: auto;
-
   box-sizing: border-box;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 .home-page figcaption {
   padding-bottom: 10px;
@@ -39,7 +42,7 @@ main div.button-container {
   margin: -62px auto 0px;
 }
 .button-container.read-more {
-  margin: 36px;
+  margin: 50px;
   position: inherit;
   width: auto;
 }
@@ -63,8 +66,12 @@ main div.button-container {
     margin-bottom: 200px;
   }
   .home-page p {
-    margin: 0 auto;
+    margin: 0 auto 30px;
   }
+  .home-page img {
+    width: 50%;
+  }
+
   main div.button-container {
     position: absolute;
     top: 250px;
