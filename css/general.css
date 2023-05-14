@@ -51,7 +51,6 @@ header div.input.show {
   background-color: var(--black);
   height: 100px;
   text-align: center;
-  padding: 30px;
 }
 header.input.show input {
   width: 50%;
@@ -122,6 +121,9 @@ ol {
 }
 .content {
   margin: 30px;
+}
+figure {
+  margin: 0;
 }
 footer {
   background-color: var(--black);

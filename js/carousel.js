@@ -2,6 +2,20 @@ const slidesContainer = document.querySelector("#slides-container");
 let slide;
 const prevButton = document.querySelector("#slide-arrow-prev");
 const nextButton = document.querySelector("#slide-arrow-next");
+const month = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
 
 nextButton.addEventListener("click", () => {
   const slideWidth = slide.clientWidth;
@@ -25,9 +39,12 @@ async function getPosts() {
 function showPosts(blogposts) {
   for (let i = 0; i < blogposts.length; i++) {
     console.log(blogposts[i].title.rendered);
-
+    const date = new Date(blogposts[i].date);
+    const postMonth = month[date.getMonth()];
+    const postDate = date.getDate();
+    const postYear = date.getFullYear();
     const title = `<li class="slide" style="background-image: url(${blogposts[i]._embedded["wp:featuredmedia"]["0"].source_url})">
-    <a href="blogpost.html?id=${blogposts[i].id}"><div class="date"><div class="month">April</div><div class="day">15</div><div class="year">2022</div></div><div class="card-title"><p>${blogposts[i].title.rendered}</p></div>
+    <a href="blogpost.html?id=${blogposts[i].id}"><div class="date"><div class="month">${postMonth}</div><div class="day">${postDate}</div><div class="year">${postYear}</div></div><div class="card-title"><p>${blogposts[i].title.rendered}</p></div>
     </a></li>`;
     slidesContainer.innerHTML += title;
   }

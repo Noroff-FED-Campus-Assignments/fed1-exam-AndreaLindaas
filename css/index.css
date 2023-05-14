@@ -8,8 +8,15 @@
 h2 {
   margin: 30px 30px 0 30px;
 }
+.image-text {
+  margin-bottom: 30px;
+}
 .image-text h2 {
   padding-top: 20px;
+}
+.image-text p {
+  padding: 12px;
+  margin: 0;
 }
 .home-page h2 {
   text-align: center;
@@ -17,12 +24,12 @@ h2 {
 
 div.image-text {
   background-color: var(--white);
-  margin: 70px 30px 30px;
+  margin-top: 72px;
 }
 .home-page img {
   width: 100%;
   height: auto;
-  padding: 5px;
+
   box-sizing: border-box;
 }
 .home-page figcaption {
@@ -32,7 +39,7 @@ main div.button-container {
   margin: -62px auto 0px;
 }
 .button-container.read-more {
-  margin: 20px;
+  margin: 36px;
   position: inherit;
   width: auto;
 }
@@ -46,8 +53,17 @@ main div.button-container {
     left: 230px;
     right: 0;
   }
+  .image-text h2 {
+    padding-top: 0;
+  }
+  .image-text p {
+    padding: 24px;
+  }
   .image-header {
     margin-bottom: 200px;
+  }
+  .home-page p {
+    margin: 0 auto;
   }
   main div.button-container {
     position: absolute;
