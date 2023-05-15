@@ -1,6 +1,7 @@
 const url =
   "https://traveller-api.lindaas.net/wp-json/wp/v2/posts?_embed&per_page=10";
 const blogpostHtml = document.querySelector(".posts");
+
 const month = [
   "January",
   "February",
@@ -22,7 +23,6 @@ async function getBlogPosts() {
   console.log(result);
   showBlogPosts(result);
 }
-getBlogPosts();
 
 function showBlogPosts(blogposts) {
   for (let i = 0; i < blogposts.length; i++) {
@@ -35,3 +35,5 @@ function showBlogPosts(blogposts) {
     blogpostHtml.innerHTML += title;
   }
 }
+
+getBlogPosts();

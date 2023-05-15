@@ -15,10 +15,10 @@ async function getPost() {
   showHeadline(result);
   showFeaturedImage(result);
   showPost(result);
+  titleName(result);
 }
 
 function showFeaturedImage(image) {
-  console.log("jgyf", image._embedded["wp:featuredmedia"]["0"].source_url);
   featuredImage.style.backgroundImage = `url(${image._embedded["wp:featuredmedia"]["0"].source_url})`;
 }
 function showHeadline(blogpost) {
@@ -29,5 +29,9 @@ function showPost(blogpost) {
   //   console.log(blogpost);
   post.innerHTML = blogpost.content.rendered;
 }
-
+function titleName(blogpost) {
+  console.log(blogpost);
+  document.title = `${blogpost.title.rendered}`;
+  document.querySelector(".title").innerHTML = document.title;
+}
 getPost();
