@@ -138,6 +138,14 @@ footer {
   height: 30px;
 }
 
+.todo-list {
+  background: purple;
+  color: white;
+  width: 490px;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
 footer span,
 footer p {
   color: var(--white);
