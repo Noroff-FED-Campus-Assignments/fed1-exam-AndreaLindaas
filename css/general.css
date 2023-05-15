@@ -117,10 +117,18 @@ h1 {
 }
 main p,
 ol {
-  max-width: 600px;
+  max-width: 500px;
 }
 .content {
   margin: 30px;
+}
+.content img {
+  max-width: 600px;
+  height: auto;
+}
+.content img {
+  max-width: 100%;
+  margin: 10px 0;
 }
 figure {
   margin: 0;
@@ -141,11 +149,17 @@ footer {
 .todo-list {
   background: purple;
   color: white;
-  width: 490px;
+  width: auto;
   padding: 24px;
   box-sizing: border-box;
+  margin: 10px 0;
 }
-
+.todo-list h2 {
+  margin-left: 38px;
+}
+.todo-list ol li {
+  padding: 10px 0;
+}
 footer span,
 footer p {
   color: var(--white);
@@ -286,6 +300,9 @@ footer .button-container {
   }
   main {
     margin-left: 200px;
+  }
+  .todo-list {
+    width: 490px;
   }
   footer {
     margin-left: 200px;

@@ -32,8 +32,6 @@ div.image-text {
   height: auto;
   box-sizing: border-box;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
 .home-page figcaption {
   padding-bottom: 10px;
@@ -65,11 +63,18 @@ main div.button-container {
   .image-header {
     margin-bottom: 200px;
   }
+  .home-page {
+    display: grid;
+    grid-template-columns: 300px auto;
+    justify-content: center;
+  }
   .home-page p {
     margin: 0 auto 30px;
   }
-  .home-page img {
-    width: 50%;
+  .home-page figure img {
+    width: 100%;
+    margin-top: 30px;
+    max-width: 400px;
   }
 
   main div.button-container {

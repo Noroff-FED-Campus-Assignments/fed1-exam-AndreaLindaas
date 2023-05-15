@@ -31,7 +31,7 @@ function showBlogPosts(blogposts) {
     const postMonth = month[date.getMonth()];
     const postDate = date.getDate();
     const postYear = date.getFullYear();
-    const title = `<li><a href="blogpost.html?id=${blogposts[i].id}"><div class="date"><div class="month">${postMonth}</div><div class="day">${postDate}</div><div class="year">${postYear}</div></div><div class="card"><img src="${blogposts[i]._embedded["wp:featuredmedia"]["0"].source_url}" class="featured-image"/><div>${blogposts[i].title.rendered}</div></div></a></li>`;
+    const title = `<li><a href="blogpost.html?id=${blogposts[i].id}"><div class="card"><div class="date"><div class="month">${postMonth}</div><div class="day">${postDate}</div><div class="year">${postYear}</div></div><img src="${blogposts[i]._embedded["wp:featuredmedia"]["0"].source_url}" class="featured-image"/><div class="card-title">${blogposts[i].title.rendered}</div></div></a></li>`;
     blogpostHtml.innerHTML += title;
   }
 }

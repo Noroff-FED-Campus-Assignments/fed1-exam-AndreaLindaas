@@ -1,10 +1,2 @@
-.content img {
-  max-width: 600px;
-  height: auto;
-}
-.post img {
-  max-width: 100%;
-}
-
 @media screen and (min-width: 768px) {
 }

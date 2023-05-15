@@ -19,14 +19,18 @@ ul li {
   list-style-type: none;
   position: relative;
 }
-
-.card div {
+.posts li {
+  margin-bottom: 30px;
+}
+.card .card-title {
   padding-bottom: 12px;
 }
-img.featured-image {
+.card img.featured-image {
   width: 100%;
   padding: 5px;
   box-sizing: border-box;
+  height: 162px;
+  margin: 0;
 }
 
 @media screen and (min-width: 768px) {
