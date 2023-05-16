@@ -32,10 +32,29 @@ function showHeadline(blogpost) {
 function showPost(blogpost) {
   //   console.log(blogpost);
   post.innerHTML = blogpost.content.rendered;
+
+  const cbox = document.querySelectorAll(".post figure img");
+
+  for (let i = 0; i < cbox.length; i++) {
+    cbox[i].addEventListener("click", function (event) {
+      showModalImage(event);
+    });
+  }
 }
 function titleName(blogpost) {
   document.title = `${blogpost.title.rendered}`;
   document.querySelector(".title").innerHTML = document.title;
 }
+
+function showModalImage(event) {
+  console.log(event.target);
+  event.target.classList.toggle("modal");
+  if (event.target.classList.contains("modal")) {
+    document.querySelector(".modal-shadow").classList.add("modal-active");
+  } else {
+    document.querySelector(".modal-shadow").classList.remove("modal-active");
+  }
+}
+
 error.innerText = "";
 getPost();

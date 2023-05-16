@@ -1,2 +1,19 @@
 @media screen and (min-width: 768px) {
+  .content figure img.modal {
+    position: absolute;
+    width: 800px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    background: black;
+    padding: 20px;
+  }
+  .modal-shadow.modal-active {
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
 }
