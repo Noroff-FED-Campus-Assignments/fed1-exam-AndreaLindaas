@@ -10,12 +10,16 @@ const featuredImage = document.querySelector(".image-header");
 const headline = document.querySelector(".headline");
 
 async function getPost() {
-  const response = await fetch(url);
-  const result = await response.json();
-  showHeadline(result);
-  showFeaturedImage(result);
-  showPost(result);
-  titleName(result);
+  try {
+    const response = await fetch(url);
+    const result = await response.json();
+    showHeadline(result);
+    showFeaturedImage(result);
+    showPost(result);
+    titleName(result);
+  } catch (e) {
+    showErrorMessage("Something went wrong when fetching blogpost.");
+  }
 }
 
 function showFeaturedImage(image) {
@@ -30,8 +34,8 @@ function showPost(blogpost) {
   post.innerHTML = blogpost.content.rendered;
 }
 function titleName(blogpost) {
-  console.log(blogpost);
   document.title = `${blogpost.title.rendered}`;
   document.querySelector(".title").innerHTML = document.title;
 }
+error.innerText = "";
 getPost();

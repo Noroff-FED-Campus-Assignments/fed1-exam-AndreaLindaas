@@ -2,6 +2,7 @@ const slidesContainer = document.querySelector("#slides-container");
 let slide;
 const prevButton = document.querySelector("#slide-arrow-prev");
 const nextButton = document.querySelector("#slide-arrow-next");
+
 const month = [
   "January",
   "February",
@@ -29,16 +30,17 @@ prevButton.addEventListener("click", () => {
 
 async function getPosts() {
   const url2 = "https://traveller-api.lindaas.net/wp-json/wp/v2/posts?_embed";
-
-  const response = await fetch(url2);
-  const result = await response.json();
-  console.log(result);
-  showPosts(result);
+  try {
+    const response = await fetch(url2);
+    const result = await response.json();
+    showPosts(result);
+  } catch (e) {
+    showErrorMessage("Something went wrong when fetching carousel.");
+  }
 }
 
 function showPosts(blogposts) {
   for (let i = 0; i < blogposts.length; i++) {
-    console.log(blogposts[i].title.rendered);
     const date = new Date(blogposts[i].date);
     const postMonth = month[date.getMonth()];
     const postDate = date.getDate();
@@ -50,4 +52,5 @@ function showPosts(blogposts) {
   }
   slide = document.querySelector(".slide");
 }
+error.innerText = "";
 getPosts();

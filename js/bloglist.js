@@ -1,7 +1,6 @@
 const url =
   "https://traveller-api.lindaas.net/wp-json/wp/v2/posts?_embed&per_page=10";
 const blogpostHtml = document.querySelector(".posts");
-
 const month = [
   "January",
   "February",
@@ -18,15 +17,17 @@ const month = [
 ];
 
 async function getBlogPosts() {
-  const response = await fetch(url);
-  const result = await response.json();
-  console.log(result);
-  showBlogPosts(result);
+  try {
+    const response = await fetch(url);
+    const result = await response.json();
+    showBlogPosts(result);
+  } catch (e) {
+    showErrorMessage("Something went wrong when fetching Archive.");
+  }
 }
 
 function showBlogPosts(blogposts) {
   for (let i = 0; i < blogposts.length; i++) {
-    console.log(blogposts[i].title.rendered);
     const date = new Date(blogposts[i].date);
     const postMonth = month[date.getMonth()];
     const postDate = date.getDate();
@@ -35,5 +36,5 @@ function showBlogPosts(blogposts) {
     blogpostHtml.innerHTML += title;
   }
 }
-
+error.innerText = "";
 getBlogPosts();
