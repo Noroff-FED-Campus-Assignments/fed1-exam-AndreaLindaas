@@ -1,5 +1,7 @@
+let page = 1;
+let totalPages = 1;
 const url =
-  "https://traveller-api.lindaas.net/wp-json/wp/v2/posts?_embed&per_page=10";
+  "https://traveller-api.lindaas.net/wp-json/wp/v2/posts?_embed&per_page=9&page=";
 const blogpostHtml = document.querySelector(".posts");
 const month = [
   "January",
@@ -18,7 +20,8 @@ const month = [
 
 async function getBlogPosts() {
   try {
-    const response = await fetch(url);
+    const response = await fetch(url + page);
+    totalPages = response.headers.get("x-wp-totalpages");
     const result = await response.json();
     showBlogPosts(result);
   } catch (e) {
@@ -36,5 +39,15 @@ function showBlogPosts(blogposts) {
     blogpostHtml.innerHTML += title;
   }
 }
+
+function seeMorePosts() {
+  page = page + 1;
+  getBlogPosts();
+  if (totalPages == page) {
+    document.querySelector(".button-container .see-more").style.display =
+      "none";
+  }
+}
+
 error.innerText = "";
 getBlogPosts();

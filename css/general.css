@@ -224,6 +224,7 @@ footer .button-container {
   border-radius: 6px;
   padding: 10px 20px;
   border: none;
+  cursor: pointer;
 }
 .buttons:hover {
   background-color: var(--purple);
@@ -237,7 +238,7 @@ footer .button-container {
 }
 .date {
   background-color: var(--darkpurple);
-  width: 60px;
+  width: 76px;
   color: var(--white);
   text-align: center;
   position: absolute;
