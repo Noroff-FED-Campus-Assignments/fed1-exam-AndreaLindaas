@@ -27,13 +27,13 @@ All of these todo's must be done to pass the asssignment.
 - [x] As a customer I can view validation message when they input an incorrect Email address.
 - [x] As a customer I can view a validation message when they input an incorrect physical address that is less than 25 characters long.
 - [x] As a customer I want to be able to view the latest blog posts on the home page.
-- [ ] As a customer, I want to see a list of the first 10 blog posts on the blog section, so that I can quickly scan through the content and decide which posts I want to read.
-- [ ] As a customer I want to be able to view a list of all blog posts on the blog section.
+- [x] As a customer, I want to see a list of the first 10 blog posts on the blog section, so that I can quickly scan through the content and decide which posts I want to read.
+- [x] As a customer I want to be able to view a list of all blog posts on the blog section.
 - [ ] As a customer I want A responsive website that can be As a customer, I want to ensure that the website is responsive and accessible so that I can access it on any device and easily navigate through it using any accessibility tools I need.
 - [x] As a customer, I want to see a clear and visually appealing design on the website, so that I can easily read the content and engage with the website.
 - [x] As a customer, I want to see a carousel/slider on the home page to display the latest blog posts, so that I can quickly access and view the latest content.
 - [x] As a customer, I want to be able to click on a blog post and be taken to a page with specific details about that post, so that I can get more in-depth information about the topic.
-- [ ] As a customer, I want to be able to click on images in a blog post and see a larger version in a modal, so that I can view images in greater detail.
+- [x] As a customer, I want to be able to click on images in a blog post and see a larger version in a modal, so that I can view images in greater detail.
 - [x] As a customer, I want to be able to easily contact the website owners through a contact form, so that I can reach out with any questions or feedback.
 - [x] As a customer, I want to see error messages when I fill out the contact form incorrectly, so that I can correct my mistakes and successfully submit my message.
 
@@ -54,7 +54,7 @@ All of these todo's must be done to pass the asssignment.
   - [ ] Each item in the list has a staggered animation.
   - [ ] Contact form success modal fades in.
 - [ ] End-user can view a custom favicon.
-- [ ] CSS uses variables
+- [x] CSS uses variables
 - [ ] Code is dry - There are no repeating functions, variables.
 - [ ] My commit messages are relavant and make sense. [How to write good commit messages](https://www.freecodecamp.org/news/how-to-write-better-git-commit-messages/)
 - [ ] As a stakeholder, I want to view the website analytics.
