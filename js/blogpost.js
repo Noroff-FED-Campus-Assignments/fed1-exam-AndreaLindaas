@@ -8,6 +8,7 @@ const url =
 const post = document.querySelector(".post");
 const featuredImage = document.querySelector(".image-header");
 const headline = document.querySelector(".headline");
+const modalShadow = document.querySelector(".modal-shadow");
 
 async function getPost() {
   try {
@@ -47,14 +48,19 @@ function titleName(blogpost) {
 }
 
 function showModalImage(event) {
-  console.log(event.target);
   event.target.classList.toggle("modal");
   if (event.target.classList.contains("modal")) {
-    document.querySelector(".modal-shadow").classList.add("modal-active");
+    modalShadow.classList.add("modal-active");
   } else {
-    document.querySelector(".modal-shadow").classList.remove("modal-active");
+    modalShadow.classList.remove("modal-active");
   }
 }
+
+modalShadow.onclick = function () {
+  console.log("hei");
+  modalShadow.classList.remove("modal-active");
+  document.querySelector(".modal").classList.remove("modal");
+};
 
 error.innerText = "";
 getPost();
