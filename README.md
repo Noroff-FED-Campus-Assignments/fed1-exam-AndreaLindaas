@@ -45,15 +45,15 @@ All of these todo's must be done to pass the asssignment.
   - [ ] Name ascending order
   - [ ] Name descending order
 - [x] Confirmation modal after custumer submits a successful contact form.
-- [ ] End-user can auto-fill the contact form using the browser auto-fill.
-- [ ] End-user can auto-fill the contact form using a password manager.
+- [x] End-user can auto-fill the contact form using the browser auto-fill.
+- [x] End-user can auto-fill the contact form using a password manager.
 - [ ] Validation still works when End-user uses copy and pastes into input fields.
-- [ ] End-user can see a postive feedback when they input correct info and pass validation.
+- [x] End-user can see a postive feedback when they input correct info and pass validation.
 - [ ] End-user can experience pleasant animations.
 - [ ] End-user needs to prove there are human using a captcha feature on the contact form.
   - [ ] Each item in the list has a staggered animation.
   - [ ] Contact form success modal fades in.
-- [ ] End-user can view a custom favicon.
+- [x] End-user can view a custom favicon.
 - [x] CSS uses variables
 - [ ] Code is dry - There are no repeating functions, variables.
 - [ ] My commit messages are relavant and make sense. [How to write good commit messages](https://www.freecodecamp.org/news/how-to-write-better-git-commit-messages/)
@@ -90,11 +90,11 @@ Make sure you go through this checklist before submitting your project to Moodle
 
 - [ ] All pages have a meta description.
 - [ ] All pages have a valid title.
-- [ ] All pages import the correct css files.
-- [ ] All pages import the correct JS file.
-- [ ] Details page URL includes a query param.
-- [ ] My website makes a GET request to an API to get a list of results.
-- [ ] My website makes a GET request to an API to get details of one result.
+- [x] All pages import the correct css files.
+- [x] All pages import the correct JS file.
+- [x] Details page URL includes a query param.
+- [x] My website makes a GET request to an API to get a list of results.
+- [x] My website makes a GET request to an API to get details of one result.
 - [ ] Input fields have the following attributes;
 - [ ] All images have an alt tag;
   - [ ] A name,

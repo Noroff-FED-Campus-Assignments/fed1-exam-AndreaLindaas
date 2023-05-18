@@ -27,11 +27,9 @@ function showFeaturedImage(image) {
   featuredImage.style.backgroundImage = `url(${image._embedded["wp:featuredmedia"]["0"].source_url})`;
 }
 function showHeadline(blogpost) {
-  //console.log(blogpost.title);
   headline.innerHTML = blogpost.title.rendered;
 }
 function showPost(blogpost) {
-  //   console.log(blogpost);
   post.innerHTML = blogpost.content.rendered;
 
   const cbox = document.querySelectorAll(".post figure img");
@@ -57,7 +55,6 @@ function showModalImage(event) {
 }
 
 modalShadow.onclick = function () {
-  console.log("hei");
   modalShadow.classList.remove("modal-active");
   document.querySelector(".modal").classList.remove("modal");
 };
