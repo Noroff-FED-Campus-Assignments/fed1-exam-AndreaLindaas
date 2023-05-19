@@ -1,3 +1,11 @@
+:root {
+  --black: #000;
+  --darkpurple: #913175;
+  --purple: #cd5888;
+  --grey: #e9e8e8;
+  --white: #fff;
+  --red: #f60606;
+}
 @media screen and (min-width: 768px) {
   .content figure img.modal {
     position: absolute;
@@ -5,7 +13,7 @@
     margin: 0 auto;
     left: 0;
     right: 0;
-    background: black;
+    background: var(--black);
     padding: 20px;
     z-index: 500;
   }

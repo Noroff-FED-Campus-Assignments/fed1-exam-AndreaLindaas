@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/search.css" />
+
+    <script
+      src="https://kit.fontawesome.com/a63e3bd4b5.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/x-icon" href="/media/favicon.ico" />
+    <!-- Hotjar Tracking Code for traveller -->
+    <script>
+      (function (h, o, t, j, a, r) {
+        h.hj =
+          h.hj ||
+          function () {
+            (h.hj.q = h.hj.q || []).push(arguments);
+          };
+        h._hjSettings = { hjid: 3494647, hjsv: 6 };
+        a = o.getElementsByTagName("head")[0];
+        r = o.createElement("script");
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <span class="menu-button"><i class="fa-solid fa-bars hover"></i></span>
+        <a href="index.html"><span class="logo">Traveller</span></a>
+        <span class="search-icon">
+          <i class="fa-solid fa-magnifying-glass hover"></i
+        ></span>
+      </div>
+      <div class="input">
+        <input type="text" placeholder="Search..." />
+      </div>
+      <nav>
+        <ul class="menu-choices">
+          <li>
+            <a href="index.html" class="button_slide slide_right">Home</a>
+          </li>
+          <li><a href="bloglist.html">Archive</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+      <div class="icons-header">
+        <a href="http://twitter.com" aria-label="twitter" target="_blank"
+          ><i class="fa-brands fa-twitter hover"></i
+        ></a>
+        <a href="http://instagram.com" aria-label="instagram" target="_blank">
+          <i class="fa-brands fa-instagram hover"></i
+        ></a>
+        <a href="http://facebook.com" aria-label="facebook" target="_blank"
+          ><i class="fa-brands fa-facebook hover"></i
+        ></a>
+      </div>
+    </header>
+    <main class="search-page">
+      <div class="error">
+        <h2>Oh no!</h2>
+        <ol></ol>
+        <p>Click the button below to reload page</p>
+        <div class="button-container">
+          <a href="#" onclick="reloadPage()" class="buttons">Try again</a>
+        </div>
+      </div>
+      <div class="image-header"></div>
+
+      <div class="content">
+        <div class="center-input">
+          <input type="text" placeholder="search" class="search-input" />
+        </div>
+        <div class="button-container">
+          <button onclick="performSearch()" class="buttons">Search</button>
+        </div>
+
+        <div class="results">
+          <p></p>
+          <ul class="posts"></ul>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="traveller-letter">
+        <span class="text-footer"
+          >The <span class="traveller">Traveller</span> letter</span
+        >
+        <p>Get inspired! Receive tips and behind the scenes stories.</p>
+      </div>
+      <div class="input">
+        <input type="email" placeholder="Your email address" />
+      </div>
+      <div class="button-container">
+        <a href="#" class="buttons">Subscribe</a>
+      </div>
+      <div class="icons-footer">
+        <a href="http://twitter.com" aria-label="twitter" target="_blank"
+          ><i class="fa-brands fa-twitter hover"></i
+        ></a>
+        <a href="http://instagram.com" aria-label="instagram" target="_blank">
+          <i class="fa-brands fa-instagram hover"></i
+        ></a>
+        <a href="http://facebook.com" aria-label="facebook" target="_blank"
+          ><i class="fa-brands fa-facebook hover"></i
+        ></a>
+      </div>
+    </footer>
+    <script src="js/general.js"></script>
+    <script src="js/search.js"></script>
+  </body>
+</html>

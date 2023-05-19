@@ -50,7 +50,7 @@ All of these todo's must be done to pass the asssignment.
 - [ ] Validation still works when End-user uses copy and pastes into input fields.
 - [ ] End-user can see a postive feedback when they input correct info and pass validation.
 - [ ] End-user can experience pleasant animations.
-- [ ] End-user needs to prove there are human using a captcha feature on the contact form.
+- [x] End-user needs to prove there are human using a captcha feature on the contact form.
   - [ ] Each item in the list has a staggered animation.
   - [ ] Contact form success modal fades in.
 - [x] End-user can view a custom favicon.
