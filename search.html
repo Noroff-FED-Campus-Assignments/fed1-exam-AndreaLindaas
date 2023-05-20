@@ -88,13 +88,14 @@
       <div class="image-header"></div>
 
       <div class="content">
-        <div class="center-input">
-          <input type="text" placeholder="search" class="search-input" />
+        <div class="search-container">
+          <div class="center-input">
+            <input type="text" placeholder="search" class="search-input" />
+          </div>
+          <div class="button-container">
+            <button onclick="performSearch()" class="buttons">Search</button>
+          </div>
         </div>
-        <div class="button-container">
-          <button onclick="performSearch()" class="buttons">Search</button>
-        </div>
-
         <div class="results">
           <p></p>
           <ul class="posts"></ul>

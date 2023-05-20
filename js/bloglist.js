@@ -3,6 +3,9 @@ let totalPages = 1;
 const url =
   "https://traveller-api.lindaas.net/wp-json/wp/v2/posts?_embed&per_page=9&page=";
 const blogpostHtml = document.querySelector(".posts");
+const sortHtml = document.querySelector("#sort");
+const filterHtml = document.querySelector("#filter");
+let blogposts = [];
 const month = [
   "January",
   "February",
@@ -23,14 +26,26 @@ async function getBlogPosts() {
     const response = await fetch(url + page);
     totalPages = response.headers.get("x-wp-totalpages");
     const result = await response.json();
-    showBlogPosts(result);
+    blogposts = result;
+    showBlogPosts();
   } catch (e) {
+    console.error(e);
     showErrorMessage("Something went wrong when fetching Archive.");
   }
 }
 
-function showBlogPosts(blogposts) {
+function showBlogPosts() {
+  sortBlogPosts();
+
   for (let i = 0; i < blogposts.length; i++) {
+    //if: (filterHtml.value == "default"){
+    //vanlige koden under.
+    // }else{ const year = filterHtml.value}{
+    /*if (postYear == year){
+
+        }
+    //}*/
+
     const date = new Date(blogposts[i].date);
     const postMonth = month[date.getMonth()];
     const postDate = date.getDate();
@@ -48,6 +63,31 @@ function seeMorePosts() {
       "none";
   }
 }
+function sortBlogPosts() {
+  let sort = sortHtml.value;
+
+  if (sort === "asc") {
+    blogposts = blogposts.sort(compare);
+  } else if (sort === "desc") {
+    blogposts = blogposts.sort(compare);
+    blogposts = blogposts.reverse();
+  }
+}
+sortHtml.onchange = function () {
+  blogpostHtml.innerHTML = "";
+  showBlogPosts();
+};
 
 error.innerText = "";
 getBlogPosts();
+
+//borrowed from the internet (stackoverflow)
+function compare(a, b) {
+  if (a.title.rendered < b.title.rendered) {
+    return -1;
+  }
+  if (a.title.rendered > b.title.rendered) {
+    return 1;
+  }
+  return 0;
+}
