@@ -223,6 +223,12 @@ footer .traveller {
 footer .button-container {
   margin: 40px;
 }
+.terms-conditions {
+  text-align: center;
+}
+.terms-conditions a:hover {
+  text-decoration: underline;
+}
 .icons-footer {
   display: grid;
   grid-template-columns: 52px 54px 31px;

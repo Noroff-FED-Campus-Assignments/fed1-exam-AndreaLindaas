@@ -44,3 +44,12 @@ function showSearchResults(result) {
     resultsHTML.innerHTML += title;
   }
 }
+
+const queryString = document.location.search;
+const params = new URLSearchParams(queryString);
+const searchword = params.get("searchword");
+
+searchInput.value = searchword;
+if (searchword) {
+  performSearch();
+}

@@ -7,14 +7,6 @@
   --red: #f60606;
 }
 /*This code is copied from https://codepen.io/tutsplus/pen/XWZqGgX*/
-* {
-  box-sizing: border-box;
-}
-
-body {
-  max-width: 1440px;
-  margin: auto;
-}
 
 .slider-wrapper {
   position: relative;

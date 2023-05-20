@@ -14,10 +14,10 @@
 span {
   font-weight: bold;
 }
-form div {
+.content form div {
   width: 270px;
 }
-form label {
+.content form label {
   display: block;
   text-align: left;
 }
