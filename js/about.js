@@ -1,6 +1,6 @@
 const url = "https://traveller-api.lindaas.net/wp-json/wp/v2/pages/76";
 const about = document.querySelector(".about");
-
+const ldsRing = document.querySelector(".lds-ring");
 async function getAboutPage() {
   try {
     const response = await fetch(url);
@@ -13,6 +13,7 @@ async function getAboutPage() {
 }
 
 function showAboutPage(home) {
+  ldsRing.style.display = "none";
   about.innerHTML = home.content.rendered;
 }
 

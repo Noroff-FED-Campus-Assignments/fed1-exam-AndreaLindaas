@@ -12,9 +12,27 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
+.quotes {
+  display: none;
+}
 
 @media screen and (min-width: 768px) {
   .image-header {
     height: 400px;
+  }
+  .quotes {
+    color: white;
+    background: black;
+    opacity: 0.6;
+    width: 300px;
+    height: 150px;
+    position: absolute;
+    top: 224px;
+    right: 90px;
+    display: block;
+  }
+  .quotes p {
+    text-align: center;
+    margin: 50px;
   }
 }
