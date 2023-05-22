@@ -53,10 +53,10 @@ function showBlogPosts() {
     const postDate = date.getDate();
     const postYear = date.getFullYear();
     if (filterHtml.value == "default") {
-      const title = `<li><a href="blogpost.html?id=${blogposts[i].id}"><div class="card"><div class="date"><div class="month">${postMonth}</div><div class="day">${postDate}</div><div class="year">${postYear}</div></div><img src="${blogposts[i]._embedded["wp:featuredmedia"]["0"].source_url}" alt="${blogposts[i]._embedded["wp:featuredmedia"]["0"].alt_text}" class="featured-image"/><div class="card-title">${blogposts[i].title.rendered}</div></div></a></li>`;
+      const title = `<li><a href="blogpost.html?id=${blogposts[i].id}"><div class="card"><div class="date"><div class="month">${postMonth}</div><div class="day">${postDate}</div><div class="year">${postYear}</div></div><img src="${blogposts[i]._embedded["wp:featuredmedia"]["0"].media_details.sizes.large.source_url}" alt="${blogposts[i]._embedded["wp:featuredmedia"]["0"].alt_text}" class="featured-image"/><div class="card-title">${blogposts[i].title.rendered}</div></div></a></li>`;
       blogpostHtml.innerHTML += title;
     } else if (filterHtml.value == postYear) {
-      const title = `<li><a href="blogpost.html?id=${blogposts[i].id}"><div class="card"><div class="date"><div class="month">${postMonth}</div><div class="day">${postDate}</div><div class="year">${postYear}</div></div><img src="${blogposts[i]._embedded["wp:featuredmedia"]["0"].source_url}" alt="${blogposts[i]._embedded["wp:featuredmedia"]["0"].alt_text}" class="featured-image"/><div class="card-title">${blogposts[i].title.rendered}</div></div></a></li>`;
+      const title = `<li><a href="blogpost.html?id=${blogposts[i].id}"><div class="card"><div class="date"><div class="month">${postMonth}</div><div class="day">${postDate}</div><div class="year">${postYear}</div></div><img src="${blogposts[i]._embedded["wp:featuredmedia"]["0"].media_details.sizes.large.source_url}" alt="${blogposts[i]._embedded["wp:featuredmedia"]["0"].alt_text}" class="featured-image"/><div class="card-title">${blogposts[i].title.rendered}</div></div></a></li>`;
       blogpostHtml.innerHTML += title;
     }
   }

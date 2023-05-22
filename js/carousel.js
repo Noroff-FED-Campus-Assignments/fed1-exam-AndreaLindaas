@@ -45,9 +45,9 @@ function showPosts(blogposts) {
     const postMonth = month[date.getMonth()];
     const postDate = date.getDate();
     const postYear = date.getFullYear();
-    const title = `<li class="slide" style="background-image: url(${blogposts[i]._embedded["wp:featuredmedia"]["0"].source_url})">
+    const title = `<li class="slide"><div style="background-image: url(${blogposts[i]._embedded["wp:featuredmedia"]["0"].media_details.sizes.medium_large.source_url})">
     <a href="blogpost.html?id=${blogposts[i].id}"><div class="date"><div class="month">${postMonth}</div><div class="day">${postDate}</div><div class="year">${postYear}</div></div><div class="card-title"><p>${blogposts[i].title.rendered}</p></div>
-    </a></li>`;
+    </a></div></li>`;
     slidesContainer.innerHTML += title;
   }
   slide = document.querySelector(".slide");

@@ -22,7 +22,7 @@ async function showFeaturedImage() {
   try {
     const response = await fetch(url);
     const result = await response.json();
-    featuredImage.style.backgroundImage = `url(${result._embedded["wp:featuredmedia"]["0"].source_url})`;
+    featuredImage.style.backgroundImage = `url(${result._embedded["wp:featuredmedia"]["0"].media_details.sizes["1536x1536"].source_url})`;
   } catch (e) {
     showErrorMessage("Something went wrong when fetching image.");
   }

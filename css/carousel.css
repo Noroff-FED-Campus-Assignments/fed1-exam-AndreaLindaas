@@ -66,12 +66,21 @@
   background-size: cover;
   background-position: center;
 }
+
 li.slide {
   position: relative;
 }
+
+li.slide > div {
+  height: 100%;
+  background-size: cover;
+  padding: 0 0px;
+  box-sizing: border-box;
+  margin-right: 2px;
+}
 div.card-title {
   background: var(--darkpurple);
-  width: 100%;
+  width: 398px;
   position: absolute;
   bottom: 0;
 }

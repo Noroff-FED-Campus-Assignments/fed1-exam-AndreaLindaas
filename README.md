@@ -52,7 +52,7 @@ All of these todo's must be done to pass the asssignment.
 - [ ] End-user can experience pleasant animations.
 - [x] End-user needs to prove there are human using a captcha feature on the contact form.
   - [ ] Each item in the list has a staggered animation.
-  - [ ] Contact form success modal fades in.
+  - [x] Contact form success modal fades in.
 - [x] End-user can view a custom favicon.
 - [x] CSS uses variables
 - [ ] Code is dry - There are no repeating functions, variables.
