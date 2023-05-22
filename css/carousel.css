@@ -76,11 +76,10 @@ li.slide > div {
   background-size: cover;
   padding: 0 0px;
   box-sizing: border-box;
-  margin-right: 2px;
 }
 div.card-title {
   background: var(--darkpurple);
-  width: 398px;
+  width: 100%;
   position: absolute;
   bottom: 0;
 }
@@ -95,5 +94,12 @@ div.card-title {
   .slider-wrapper {
     margin: 0 auto;
     margin-bottom: 58px;
+  }
+  div.card-title {
+    background: var(--darkpurple);
+  }
+  li.slide > div {
+    border-left: 3px solid var(--darkpurple);
+    border-right: 3px solid var(--darkpurple);
   }
 }

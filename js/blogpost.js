@@ -24,7 +24,7 @@ async function getPost() {
 }
 
 function showFeaturedImage(image) {
-  featuredImage.style.backgroundImage = `url(${image._embedded["wp:featuredmedia"]["0"].source_url})`;
+  featuredImage.style.backgroundImage = `url(${image._embedded["wp:featuredmedia"]["0"].media_details.sizes["1536x1536"].source_url})`;
 }
 function showHeadline(blogpost) {
   headline.innerHTML = blogpost.title.rendered;

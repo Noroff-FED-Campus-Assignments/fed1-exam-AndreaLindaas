@@ -17,14 +17,14 @@
 }
 .search-page .content input.search-input {
   height: 30px;
-  width: 80%;
+  width: 200px;
 }
 header div.input {
   display: none;
 }
 .search-container {
   display: grid;
-  grid-template-columns: 318px 88px;
+  grid-template-columns: auto 88px;
   justify-content: center;
 }
 
@@ -36,5 +36,8 @@ header div.input {
   .search-page .content input.search-input {
     height: 30px;
     width: 300px;
+  }
+  .search-container {
+    grid-template-columns: 318px 88px;
   }
 }
