@@ -40,15 +40,23 @@ form .button-container {
 .error-messages li {
   color: var(--red);
   padding: 4px;
+  display: none;
 }
+
+.error-messages li.visible {
+  display: inline-block;
+}
+
 .input input.input-success,
 .input textarea.input-success {
-  border: solid 2px green;
+  border: solid 3px green;
+  outline-color: green;
 }
 
 .input input.input-error,
 .input textarea.input-error {
-  border: solid 2px var(--red);
+  border: solid 3px var(--red);
+  outline-color: red;
 }
 
 .modal {
@@ -86,6 +94,7 @@ form .button-container {
   font-weight: bold;
   cursor: pointer;
 }
+
 @media screen and (min-width: 768px) {
   .modal .modal-content {
     width: 500px;

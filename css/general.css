@@ -58,10 +58,13 @@ input {
   border-radius: 6px;
   padding-left: 10px;
   border: 3px solid var(--darkpurple);
+  width: 270px;
+  height: 30px;
 }
 input:focus {
   outline-color: var(--darkpurple);
 }
+
 textarea:focus {
   outline-color: var(--darkpurple);
 }
@@ -93,10 +96,7 @@ nav ul li a {
   color: var(--white);
   text-decoration: none;
 }
-/* main div {
-  height: 300px;
-  color: var(--white);
-} */
+
 .image-header {
   height: 200px;
   background-size: cover;
@@ -137,13 +137,6 @@ footer {
   margin-top: 80px;
 }
 
-.input input {
-  border: 3px solid var(--darkpurple);
-  border-radius: 6px;
-  width: 270px;
-  height: 30px;
-}
-
 .todo-list {
   background: purple;
   color: white;
@@ -180,7 +173,6 @@ main .error .button-container {
   position: initial;
 }
 
-/*card ting*/
 ul {
   padding: 0;
 }
@@ -200,7 +192,6 @@ ul li {
   box-sizing: border-box;
   margin: 0;
 }
-/*card ting*/
 
 footer span,
 footer p {
@@ -364,7 +355,7 @@ footer .button-container {
   .icons-footer {
     display: none;
   }
-  /*card ting*/
+
   ul.posts {
     display: grid;
     grid-template-columns: auto auto auto;
@@ -372,7 +363,6 @@ footer .button-container {
   .card img.featured-image {
     height: 162px;
   }
-  /*card ting*/
 }
 /*loading spinner from loading.io*/
 .lds-ring {

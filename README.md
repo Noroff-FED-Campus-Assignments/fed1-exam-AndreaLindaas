@@ -96,7 +96,7 @@ Make sure you go through this checklist before submitting your project to Moodle
 - [x] My website makes a GET request to an API to get a list of results.
 - [x] My website makes a GET request to an API to get details of one result.
 - [ ] Input fields have the following attributes;
-- [ ] All images have an alt tag;
+- [x] All images have an alt tag;
   - [ ] A name,
   - [ ] A placeholder,
   - [ ] A aria-describedby,

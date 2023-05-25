@@ -1,19 +1,26 @@
 const form = document.querySelector("#form");
 const errorMessages = document.querySelector(".error-messages");
+
 const nameInput = document.querySelector("#name");
+const nameErrorMessage = document.querySelector(".errormessage-name");
+
 const emailInput = document.querySelector("#email");
+
 const subjectInput = document.querySelector("#subject");
+const subjectErrorMessage = document.querySelector(".errormessage-subject");
+
 const messageInput = document.querySelector("#message");
+
 const modal = document.querySelector(".modal");
 const closeModal = document.querySelector(".close");
 const reset = document.querySelector(".reset");
 
 form.onsubmit = function (event) {
   event.preventDefault();
-  errorMessages.innerHTML = "";
-  validateName(nameInput.value);
+  // errorMessages.innerHTML = "";
+  // validateName(nameInput.value);
   validateEmail(email.value);
-  validateSubject(subject.value);
+  // validateSubject(subject.value);
   validateMessage(message.value);
   if (errorMessages.innerHTML === "") {
     modal.style.display = "block";
@@ -28,17 +35,23 @@ closeModal.onclick = function () {
   messageInput.value = "";
 };
 
-function validateName(name) {
-  if (!name) {
-    let errorMessage = "<li>Name is required</li>";
-    errorMessages.innerHTML += errorMessage;
-    nameInput.classList.add("input-error");
+nameInput.addEventListener("input", validateNameRealtime);
+function validateNameRealtime() {
+  if (nameInput.value.length == 0) {
     nameInput.classList.remove("input-success");
-  } else {
     nameInput.classList.remove("input-error");
+    nameErrorMessage.classList.remove("visible");
+  } else if (nameInput.value.length < 2) {
+    nameInput.classList.remove("input-success");
+    nameInput.classList.add("input-error");
+    nameErrorMessage.classList.add("visible");
+  } else {
     nameInput.classList.add("input-success");
+    nameInput.classList.remove("input-error");
+    nameErrorMessage.classList.remove("visible");
   }
 }
+
 function validateEmail(email) {
   const regEx = /\S+@\S+\.\S+/;
   const patternMatches = regEx.test(email);
@@ -52,21 +65,20 @@ function validateEmail(email) {
     emailInput.classList.add("input-success");
   }
 }
-
-function validateSubject(subject) {
-  if (!subject) {
-    let errorMessage = "<li>Subject is required</li>";
-    errorMessages.innerHTML += errorMessage;
-    subjectInput.classList.add("input-error");
+subjectInput.addEventListener("input", validateSubjectRealtime);
+function validateSubjectRealtime() {
+  if (subjectInput.value.length == 0) {
     subjectInput.classList.remove("input-success");
-  } else if (subject.trim().length < 15) {
-    let errorMessage = "<li>Subject is to short (min 15)</li>";
-    errorMessages.innerHTML += errorMessage;
-    subjectInput.classList.add("input-error");
-    subjectInput.classList.remove("input-success");
-  } else {
     subjectInput.classList.remove("input-error");
+    subjectErrorMessage.classList.remove("visible");
+  } else if (subjectInput.value.trim().length < 15) {
+    subjectInput.classList.remove("input-success");
+    subjectInput.classList.add("input-error");
+    subjectErrorMessage.classList.add("visible");
+  } else {
     subjectInput.classList.add("input-success");
+    subjectInput.classList.remove("input-error");
+    subjectErrorMessage.classList.remove("visible");
   }
 }
 
