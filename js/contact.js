@@ -1,15 +1,17 @@
 const form = document.querySelector("#form");
-const errorMessages = document.querySelector(".error-messages");
+const visibleHtml = document.querySelector(".visible");
 
 const nameInput = document.querySelector("#name");
 const nameErrorMessage = document.querySelector(".errormessage-name");
 
 const emailInput = document.querySelector("#email");
+const emailErrorMessage = document.querySelector(".errormessage-email");
 
 const subjectInput = document.querySelector("#subject");
 const subjectErrorMessage = document.querySelector(".errormessage-subject");
 
 const messageInput = document.querySelector("#message");
+const messageErrorMessage = document.querySelector(".errormessage-message");
 
 const modal = document.querySelector(".modal");
 const closeModal = document.querySelector(".close");
@@ -19,10 +21,10 @@ form.onsubmit = function (event) {
   event.preventDefault();
   // errorMessages.innerHTML = "";
   // validateName(nameInput.value);
-  validateEmail(email.value);
+  // validateEmail(email.value);
   // validateSubject(subject.value);
-  validateMessage(message.value);
-  if (errorMessages.innerHTML === "") {
+  // validateMessage(message.value);
+  if (!visibleHtml.innerHTML === "") {
     modal.style.display = "block";
   }
 };
@@ -51,20 +53,37 @@ function validateNameRealtime() {
     nameErrorMessage.classList.remove("visible");
   }
 }
-
-function validateEmail(email) {
+emailInput.addEventListener("input", validateEmailRealtime);
+function validateEmailRealtime() {
   const regEx = /\S+@\S+\.\S+/;
   const patternMatches = regEx.test(email);
-  if (!patternMatches) {
-    let errorMessage = "<li>Email is required</li>";
-    errorMessages.innerHTML += errorMessage;
-    emailInput.classList.add("input-error");
+  if (emailInput.value.length == 0) {
     emailInput.classList.remove("input-success");
-  } else {
     emailInput.classList.remove("input-error");
+    emailErrorMessage.classList.remove("visible");
+  } else if (!patternMatches) {
+    emailInput.classList.remove("input-success");
+    emailInput.classList.add("input-error");
+    emailErrorMessage.classList.add("visible");
+  } else {
     emailInput.classList.add("input-success");
+    emailInput.classList.remove("input-error");
+    emailErrorMessage.classList.remove("visible");
   }
 }
+// function validateEmail(email) {
+//   const regEx = /\S+@\S+\.\S+/;
+//   const patternMatches = regEx.test(email);
+//   if (!patternMatches) {
+//     let errorMessage = "<li>Email is required</li>";
+//     errorMessages.innerHTML += errorMessage;
+//     emailInput.classList.add("input-error");
+//     emailInput.classList.remove("input-success");
+//   } else {
+//     emailInput.classList.remove("input-error");
+//     emailInput.classList.add("input-success");
+//   }
+// }
 subjectInput.addEventListener("input", validateSubjectRealtime);
 function validateSubjectRealtime() {
   if (subjectInput.value.length == 0) {
@@ -81,20 +100,19 @@ function validateSubjectRealtime() {
     subjectErrorMessage.classList.remove("visible");
   }
 }
-
-function validateMessage(message) {
-  if (!message) {
-    let errorMessage = "<li>Message is required</li>";
-    errorMessages.innerHTML += errorMessage;
-    messageInput.classList.add("input-error");
+messageInput.addEventListener("input", validateMessageRealtime);
+function validateMessageRealtime() {
+  if (messageInput.value.length == 0) {
     messageInput.classList.remove("input-success");
-  } else if (message.trim().length < 25) {
-    let errorMessage = "<li>Message is too short (min 25)</li>";
-    errorMessages.innerHTML += errorMessage;
-    messageInput.classList.add("input-error");
-    messageInput.classList.remove("input-success");
-  } else {
     messageInput.classList.remove("input-error");
+    messageErrorMessage.classList.remove("visible");
+  } else if (messageInput.value.trim().length < 25) {
+    messageInput.classList.remove("input-success");
+    messageInput.classList.add("input-error");
+    messageErrorMessage.classList.add("visible");
+  } else {
     messageInput.classList.add("input-success");
+    messageInput.classList.remove("input-error");
+    messageErrorMessage.classList.remove("visible");
   }
 }

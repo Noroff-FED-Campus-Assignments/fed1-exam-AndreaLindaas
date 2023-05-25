@@ -269,7 +269,7 @@ footer .button-container {
   position: absolute;
   top: 0;
   left: 0;
-  padding: 2px;
+  padding: 8px;
 }
 
 @media screen and (min-width: 768px) {
@@ -358,10 +358,10 @@ footer .button-container {
 
   ul.posts {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto;
   }
   .card img.featured-image {
-    height: 162px;
+    height: 250px;
   }
 }
 /*loading spinner from loading.io*/

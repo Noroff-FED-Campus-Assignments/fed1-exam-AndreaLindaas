@@ -1,7 +1,7 @@
 let page = 1;
 let totalPages = 1;
 const url =
-  "https://traveller-api.lindaas.net/wp-json/wp/v2/posts?_embed&per_page=9&page=";
+  "https://traveller-api.lindaas.net/wp-json/wp/v2/posts?_embed&per_page=10&page=";
 const filterUrl =
   "https://traveller-api.lindaas.net/wp-json/wp/v2/posts?_embed&per_page=100&page=1&tags=";
 const blogpostHtml = document.querySelector(".posts");
