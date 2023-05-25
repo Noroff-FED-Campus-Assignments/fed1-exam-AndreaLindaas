@@ -1,6 +1,4 @@
 const form = document.querySelector("#form");
-const visibleHtml = document.querySelector(".visible");
-
 const nameInput = document.querySelector("#name");
 const nameErrorMessage = document.querySelector(".errormessage-name");
 
@@ -19,12 +17,8 @@ const reset = document.querySelector(".reset");
 
 form.onsubmit = function (event) {
   event.preventDefault();
-  // errorMessages.innerHTML = "";
-  // validateName(nameInput.value);
-  // validateEmail(email.value);
-  // validateSubject(subject.value);
-  // validateMessage(message.value);
-  if (!visibleHtml.innerHTML === "") {
+  const result = document.querySelectorAll("li.visible");
+  if (result.length == 0) {
     modal.style.display = "block";
   }
 };
@@ -39,11 +33,7 @@ closeModal.onclick = function () {
 
 nameInput.addEventListener("input", validateNameRealtime);
 function validateNameRealtime() {
-  if (nameInput.value.length == 0) {
-    nameInput.classList.remove("input-success");
-    nameInput.classList.remove("input-error");
-    nameErrorMessage.classList.remove("visible");
-  } else if (nameInput.value.length < 2) {
+  if (nameInput.value.length < 2) {
     nameInput.classList.remove("input-success");
     nameInput.classList.add("input-error");
     nameErrorMessage.classList.add("visible");
@@ -56,12 +46,8 @@ function validateNameRealtime() {
 emailInput.addEventListener("input", validateEmailRealtime);
 function validateEmailRealtime() {
   const regEx = /\S+@\S+\.\S+/;
-  const patternMatches = regEx.test(email);
-  if (emailInput.value.length == 0) {
-    emailInput.classList.remove("input-success");
-    emailInput.classList.remove("input-error");
-    emailErrorMessage.classList.remove("visible");
-  } else if (!patternMatches) {
+  const patternMatches = regEx.test(emailInput.value);
+  if (!patternMatches) {
     emailInput.classList.remove("input-success");
     emailInput.classList.add("input-error");
     emailErrorMessage.classList.add("visible");
@@ -71,26 +57,10 @@ function validateEmailRealtime() {
     emailErrorMessage.classList.remove("visible");
   }
 }
-// function validateEmail(email) {
-//   const regEx = /\S+@\S+\.\S+/;
-//   const patternMatches = regEx.test(email);
-//   if (!patternMatches) {
-//     let errorMessage = "<li>Email is required</li>";
-//     errorMessages.innerHTML += errorMessage;
-//     emailInput.classList.add("input-error");
-//     emailInput.classList.remove("input-success");
-//   } else {
-//     emailInput.classList.remove("input-error");
-//     emailInput.classList.add("input-success");
-//   }
-// }
+
 subjectInput.addEventListener("input", validateSubjectRealtime);
 function validateSubjectRealtime() {
-  if (subjectInput.value.length == 0) {
-    subjectInput.classList.remove("input-success");
-    subjectInput.classList.remove("input-error");
-    subjectErrorMessage.classList.remove("visible");
-  } else if (subjectInput.value.trim().length < 15) {
+  if (subjectInput.value.trim().length < 15) {
     subjectInput.classList.remove("input-success");
     subjectInput.classList.add("input-error");
     subjectErrorMessage.classList.add("visible");
@@ -102,11 +72,7 @@ function validateSubjectRealtime() {
 }
 messageInput.addEventListener("input", validateMessageRealtime);
 function validateMessageRealtime() {
-  if (messageInput.value.length == 0) {
-    messageInput.classList.remove("input-success");
-    messageInput.classList.remove("input-error");
-    messageErrorMessage.classList.remove("visible");
-  } else if (messageInput.value.trim().length < 25) {
+  if (messageInput.value.trim().length < 25) {
     messageInput.classList.remove("input-success");
     messageInput.classList.add("input-error");
     messageErrorMessage.classList.add("visible");

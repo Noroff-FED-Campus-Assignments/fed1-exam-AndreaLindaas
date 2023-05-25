@@ -5,6 +5,9 @@ const id = params.get("id");
 const url =
   "https://traveller-api.lindaas.net/wp-json/wp/v2/posts/" + id + "?_embed";
 
+const commentUrl =
+  "https://traveller-api.lindaas.net/wp-json/wp/v2/comments?post=" + id;
+
 const post = document.querySelector(".post");
 const featuredImage = document.querySelector(".image-header");
 const headline = document.querySelector(".headline");

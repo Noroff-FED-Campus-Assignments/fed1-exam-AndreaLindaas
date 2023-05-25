@@ -97,25 +97,26 @@
             You can e-mail me directly at <span>sara@traveller.com</span> or use
             the contact form below.
           </p>
+          <p>We do not share any of the information you provide below to any third parties. Your information is safe with us and will be deleted after 30 days.</p>
         </div>
         <div>
           <form id="form" autocomplete="on">
             <div>
               <div class="input">
                 <label for="name">Name*</label>
-                <input type="text" name="name" id="name" />
+                <input type="text" name="name" id="name" required />
               </div>
               <div class="input">
                 <label for="email">Email*</label>
-                <input type="email" name="email" id="email" />
+                <input type="email" name="email" id="email" required/>
               </div>
               <div class="input">
                 <label for="subject">Subject*</label>
-                <input type="text" name="subject" id="subject" />
+                <input type="text" name="subject" id="subject"required />
               </div>
               <div class="input">
                 <label for="">Message*</label>
-                <textarea id="message" name="message"></textarea>
+                <textarea id="message" name="message"></textarea required>
               </div>
               <div
                 class="g-recaptcha"
