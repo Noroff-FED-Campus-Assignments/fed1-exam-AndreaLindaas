@@ -21,7 +21,7 @@
   grid-template-columns: auto 100px;
 }
 .date-post {
-  color: grey;
+  font-size: 14px;
 }
 .blogpost-button-container {
   text-align: left;

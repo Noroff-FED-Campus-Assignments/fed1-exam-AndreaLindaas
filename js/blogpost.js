@@ -95,11 +95,8 @@ form.onsubmit = function (event) {
   event.preventDefault();
 
   const name = nameInput.value;
-  console.log(name);
   const email = emailInput.value;
-  console.log(email);
   const message = messageInput.value;
-  console.log(message);
 
   const data = JSON.stringify({
     post: id,
@@ -115,7 +112,6 @@ form.onsubmit = function (event) {
     body: data,
   })
     .then((response) => {
-      console.log(response);
       if (response.ok === true) {
         nameInput.value = "";
         emailInput.value = "";

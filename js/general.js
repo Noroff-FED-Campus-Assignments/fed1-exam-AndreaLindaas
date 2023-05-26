@@ -29,6 +29,5 @@ sidebarSearch.onsubmit = function (event) {
   event.preventDefault();
 
   let word = sidebarSearchInput.value;
-  console.log(word);
   window.location.href = "search.html?searchword=" + word;
 };

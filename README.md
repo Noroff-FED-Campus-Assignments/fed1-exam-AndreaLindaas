@@ -29,7 +29,7 @@ All of these todo's must be done to pass the asssignment.
 - [x] As a customer I want to be able to view the latest blog posts on the home page.
 - [x] As a customer, I want to see a list of the first 10 blog posts on the blog section, so that I can quickly scan through the content and decide which posts I want to read.
 - [x] As a customer I want to be able to view a list of all blog posts on the blog section.
-- [ ] As a customer I want A responsive website that can be As a customer, I want to ensure that the website is responsive and accessible so that I can access it on any device and easily navigate through it using any accessibility tools I need.
+- [x] As a customer I want A responsive website that can be As a customer, I want to ensure that the website is responsive and accessible so that I can access it on any device and easily navigate through it using any accessibility tools I need.
 - [x] As a customer, I want to see a clear and visually appealing design on the website, so that I can easily read the content and engage with the website.
 - [x] As a customer, I want to see a carousel/slider on the home page to display the latest blog posts, so that I can quickly access and view the latest content.
 - [x] As a customer, I want to be able to click on a blog post and be taken to a page with specific details about that post, so that I can get more in-depth information about the topic.
@@ -61,24 +61,23 @@ All of these todo's must be done to pass the asssignment.
 - [x] As a stakeholder, I want to show my customers a disclamer on the website, so that they are aware of the terms and conditions of using the website.
 - [x] As a customer, I want to ensure that my personal information submitted through the contact form is kept secure and not shared with any third-party entities.
 - [x] As a customer, I want to be able to sort, filter, or search the blog posts, so that I can quickly find the content that is most relevant to me.
-- [ ] As a customer, I want to be able to submit comments on a blog post, so that I can engage with other readers and share my thoughts on the topic.
+- [x] As a customer, I want to be able to submit comments on a blog post, so that I can engage with other readers and share my thoughts on the topic.
 
 ## Checklist
 
 Make sure you go through this checklist before submitting your project to Moodle.
 
-- [ ] All pages have a meta description.
-- [ ] All pages have a valid title.
+- [x] All pages have a meta description.
+- [x] All pages have a valid title.
 - [x] All pages import the correct css files.
 - [x] All pages import the correct JS file.
 - [x] Details page URL includes a query param.
 - [x] My website makes a GET request to an API to get a list of results.
 - [x] My website makes a GET request to an API to get details of one result.
-- [ ] Input fields have the following attributes;
+- [x] Input fields have the following attributes;
 - [x] All images have an alt tag;
   - [x] A name,
   - [x] A placeholder,
-  - [ ] A aria-describedby,
   - [x] Required
 - [x] I have not copied Javascript code.
 - [x] I have not used a Javascript library.
@@ -87,8 +86,8 @@ Make sure you go through this checklist before submitting your project to Moodle
 - [x] Committed all my code to github.
 - [x] My repo is publically viewable.
 - [ ] I've submitted/ written a report.
-- [ ] I've removed all todo notes in code.
-- [ ] I've removed all console logs in code.
+- [x] I've removed all todo notes in code.
+- [x] I've removed all console logs in code.
 - [x] Code is formatted correctly.
 - [x] There are no red underlines in VSCode.
 - [x] There are no error messages in the terminal when I run the project.

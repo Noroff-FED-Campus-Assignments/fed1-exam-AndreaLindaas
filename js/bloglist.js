@@ -32,7 +32,6 @@ async function getBlogPosts() {
     blogposts = result;
     showBlogPosts();
   } catch (e) {
-    console.error(e);
     showErrorMessage("Something went wrong when fetching Archive.");
   }
 }

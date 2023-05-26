@@ -19,7 +19,6 @@ const month = [
 
 function performSearch() {
   let searchWord = searchInput.value;
-  console.log(searchWord);
   fetchData(url + searchWord);
 }
 

@@ -12,6 +12,11 @@ body {
   background-color: var(--grey);
 }
 
+p,
+ul,
+ol {
+  line-height: 1.5em;
+}
 header {
   background-color: var(--black);
 }
