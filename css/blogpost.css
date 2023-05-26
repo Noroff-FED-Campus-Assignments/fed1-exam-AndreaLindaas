@@ -6,6 +6,23 @@
   --white: #fff;
   --red: #f60606;
 }
+.comment-box {
+  width: 400px;
+  box-shadow: 0 0 11px var(--darkpurple);
+  background-color: var(--white);
+  padding: 10px;
+}
+.name-date {
+  display: grid;
+  grid-template-columns: auto 100px;
+}
+.date-post {
+  color: grey;
+}
+.blogpost-button-container {
+  text-align: left;
+  margin-top: 10px;
+}
 @media screen and (min-width: 768px) {
   .content figure img.modal {
     position: absolute;

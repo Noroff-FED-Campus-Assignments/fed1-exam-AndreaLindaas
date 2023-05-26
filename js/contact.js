@@ -13,7 +13,6 @@ const messageErrorMessage = document.querySelector(".errormessage-message");
 
 const modal = document.querySelector(".modal");
 const closeModal = document.querySelector(".close");
-const reset = document.querySelector(".reset");
 
 form.onsubmit = function (event) {
   event.preventDefault();

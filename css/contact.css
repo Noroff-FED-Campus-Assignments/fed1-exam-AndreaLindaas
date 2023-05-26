@@ -17,21 +17,11 @@ span {
 .content form div {
   width: 270px;
 }
-.content form label {
-  display: block;
-  text-align: left;
-}
 
 .content .input {
   margin: 16px 0;
 }
-.input textarea {
-  border: 3px solid var(--darkpurple);
-  border-radius: 6px;
-  width: 270px;
-  height: 66px;
-  padding-left: 10px;
-}
+
 form .button-container {
   margin-top: 40px;
   text-align: left;

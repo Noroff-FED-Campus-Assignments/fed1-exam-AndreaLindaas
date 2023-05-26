@@ -12,6 +12,12 @@ const post = document.querySelector(".post");
 const featuredImage = document.querySelector(".image-header");
 const headline = document.querySelector(".headline");
 const modalShadow = document.querySelector(".modal-shadow");
+const comments = document.querySelector(".comments");
+const form = document.querySelector("#form");
+const nameInput = document.querySelector("#name");
+const emailInput = document.querySelector("#email");
+const messageInput = document.querySelector("#message");
+const errorComment = document.querySelector(".error-comment");
 
 async function getPost() {
   try {
@@ -61,6 +67,76 @@ modalShadow.onclick = function () {
   modalShadow.classList.remove("modal-active");
   document.querySelector(".modal").classList.remove("modal");
 };
+
+//Comments
+
+async function getComments() {
+  try {
+    const response = await fetch(commentUrl);
+    const result = await response.json();
+    console.log(result);
+    showComments(result);
+  } catch (e) {
+    showErrorMessage("Something went wrong when fetching blogpost.");
+  }
+}
+function showComments(result) {
+  comments.innerHTML = "";
+  for (let i = 0; i < result.length; i++) {
+    console.log(result.length);
+    const date = new Date(result[i].date);
+    console.log(date.toLocaleDateString());
+    const comment = `<li><div class="comment-box"><div class="name-date"><div><strong>${
+      result[i].author_name
+    }</strong></div><div class="date-post">${date.toLocaleDateString()}</div></div><div>${
+      result[i].content.rendered
+    }</div></div></li>`;
+    comments.innerHTML += comment;
+  }
+}
+form.onsubmit = function (event) {
+  event.preventDefault();
+
+  const name = nameInput.value;
+  console.log(name);
+  const email = emailInput.value;
+  console.log(email);
+  const message = messageInput.value;
+  console.log(message);
+
+  const data = JSON.stringify({
+    post: id,
+    author_name: name,
+    author_email: email,
+    content: message,
+  });
+  fetch("https://traveller-api.lindaas.net/wp-json/wp/v2/comments", {
+    method: "post",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: data,
+  })
+    .then((response) => {
+      console.log(response);
+      if (response.ok === true) {
+        nameInput.value = "";
+        emailInput.value = "";
+        messageInput.value = "";
+
+        getComments();
+      }
+
+      return response.json();
+    })
+    .then(() => {
+      const errorText = `Something went wrong with comments`;
+      errorComment.innerHTML = errorText;
+    })
+    .catch((error) => console.error("Error:", error));
+};
+
+getComments();
 
 error.innerText = "";
 getPost();

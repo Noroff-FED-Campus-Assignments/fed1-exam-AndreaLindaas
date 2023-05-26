@@ -64,7 +64,17 @@ input {
 input:focus {
   outline-color: var(--darkpurple);
 }
-
+.input textarea {
+  border: 3px solid var(--darkpurple);
+  border-radius: 6px;
+  width: 270px;
+  height: 66px;
+  padding-left: 10px;
+}
+.content form label {
+  display: block;
+  text-align: left;
+}
 textarea:focus {
   outline-color: var(--darkpurple);
 }

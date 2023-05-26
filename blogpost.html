@@ -82,7 +82,6 @@
     <main>
       <div class="error">
         <h2>Oh no!</h2>
-
         <ol></ol>
         <p>Click the button below to reload page</p>
         <div class="button-container">
@@ -97,6 +96,26 @@
       <div class="content">
         <div class="post"></div>
         <div class="modal-shadow"></div>
+        <form id="form">
+          <div class="input">
+            <label for="name">Name*</label>
+            <input type="text" name="name" id="name" required />
+          </div>
+          <div class="input">
+            <label for="email">Email*</label>
+            <input type="email" name="email" id="email" required />
+          </div>
+          <div class="input">
+            <label for="">Message*</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <div class="blogpost-button-container">
+            <button type="submit" class="buttons">Post comment</button>
+          </div>
+          <div class="error-comment"></div>
+        </form>
+        <h2>Comments</h2>
+        <ul class="comments"></ul>
       </div>
     </main>
     <footer>
