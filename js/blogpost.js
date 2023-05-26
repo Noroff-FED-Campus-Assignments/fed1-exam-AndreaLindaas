@@ -74,7 +74,6 @@ async function getComments() {
   try {
     const response = await fetch(commentUrl);
     const result = await response.json();
-    console.log(result);
     showComments(result);
   } catch (e) {
     showErrorMessage("Something went wrong when fetching blogpost.");
@@ -83,9 +82,7 @@ async function getComments() {
 function showComments(result) {
   comments.innerHTML = "";
   for (let i = 0; i < result.length; i++) {
-    console.log(result.length);
     const date = new Date(result[i].date);
-    console.log(date.toLocaleDateString());
     const comment = `<li><div class="comment-box"><div class="name-date"><div><strong>${
       result[i].author_name
     }</strong></div><div class="date-post">${date.toLocaleDateString()}</div></div><div>${
@@ -129,11 +126,10 @@ form.onsubmit = function (event) {
 
       return response.json();
     })
-    .then(() => {
+    .catch(() => {
       const errorText = `Something went wrong with comments`;
       errorComment.innerHTML = errorText;
-    })
-    .catch((error) => console.error("Error:", error));
+    });
 };
 
 getComments();
