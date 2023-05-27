@@ -8,8 +8,6 @@
 - [Brief](https://fed-vocational-astro-course.vercel.app/en/exam-1/brief)
 - [Design](https://www.figma.com/file/flxcuFHcmde6u3nvnWUnkJ/Project-exam-1?type=design&node-id=9%3A117&t=IJZWM6DNsYQuIEDN-1)
 - [Production deploy](https://traveller-andrea.netlify.app/)
-- [API Docs](_LINK_TO_API_DOCS_)
-- [API Endpoint](_LINK_TO_API_DOC)
 
 ## Report
 
