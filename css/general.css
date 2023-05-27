@@ -266,7 +266,7 @@ footer .button-container {
 }
 .card {
   background-color: var(--darkpurple);
-  width: 80%;
+
   text-align: center;
   color: var(--white);
   transform: rotate(0deg);
@@ -345,7 +345,9 @@ footer .button-container {
     width: 50%;
     height: auto;
   }
-
+  .card {
+    width: 80%;
+  }
   footer .input input {
     width: 40%;
   }
