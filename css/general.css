@@ -266,16 +266,11 @@ footer .button-container {
 }
 .card {
   background-color: var(--darkpurple);
-
   text-align: center;
   color: var(--white);
   transform: rotate(0deg);
 }
-.card:hover {
-  opacity: 0.8;
-  transform: rotate(1deg);
-  transition: transform 0.2s ease-in-out;
-}
+
 .date {
   background-color: var(--darkpurple);
   width: 76px;
@@ -347,6 +342,11 @@ footer .button-container {
   }
   .card {
     width: 80%;
+  }
+  .card:hover {
+    opacity: 0.8;
+    transform: rotate(1deg);
+    transition: transform 0.2s ease-in-out;
   }
   footer .input input {
     width: 40%;
