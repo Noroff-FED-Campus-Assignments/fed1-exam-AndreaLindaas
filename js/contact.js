@@ -1,30 +1,83 @@
-/*
-============================================
-Constants
-@example: https://github.com/S3ak/fed-javascript1-api-calls/blob/main/examples/advanced-form.html#L50
-============================================
-*/
+const form = document.querySelector("#form");
+const nameInput = document.querySelector("#name");
+const nameErrorMessage = document.querySelector(".errormessage-name");
 
-// TODO: Get DOM elements from the DOM
+const emailInput = document.querySelector("#email");
+const emailErrorMessage = document.querySelector(".errormessage-email");
 
-// TODO: Create event listeners for the form
+const subjectInput = document.querySelector("#subject");
+const subjectErrorMessage = document.querySelector(".errormessage-subject");
 
-/*
-============================================
-API calls
-@example: https://github.com/S3ak/fed-javascript1-api-calls/blob/main/examples/advanced-form.html#L157
-============================================
-*/
+const messageInput = document.querySelector("#message");
+const messageErrorMessage = document.querySelector(".errormessage-message");
 
-// TODO: Set up a function to fetch data from the API
+const modal = document.querySelector(".modal");
+const closeModal = document.querySelector(".close");
 
-/*
-============================================
-Helper functions
-@example: https://github.com/S3ak/fed-javascript1-api-calls/blob/main/examples/advanced-form.html#L118
-============================================
-*/
+form.onsubmit = function (event) {
+  event.preventDefault();
+  const result = document.querySelectorAll("li.visible");
+  if (result.length == 0) {
+    modal.style.display = "block";
+  }
+};
 
-// TODO: Create a function to validate an input field
+closeModal.onclick = function () {
+  modal.style.display = "none";
+  nameInput.value = "";
+  emailInput.value = "";
+  subjectInput.value = "";
+  messageInput.value = "";
+};
 
-// TODO: Create a function to create a DOM element
+nameInput.addEventListener("input", validateNameRealtime);
+function validateNameRealtime() {
+  if (nameInput.value.length < 2) {
+    nameInput.classList.remove("input-success");
+    nameInput.classList.add("input-error");
+    nameErrorMessage.classList.add("visible");
+  } else {
+    nameInput.classList.add("input-success");
+    nameInput.classList.remove("input-error");
+    nameErrorMessage.classList.remove("visible");
+  }
+}
+emailInput.addEventListener("input", validateEmailRealtime);
+function validateEmailRealtime() {
+  const regEx = /\S+@\S+\.\S+/;
+  const patternMatches = regEx.test(emailInput.value);
+  if (!patternMatches) {
+    emailInput.classList.remove("input-success");
+    emailInput.classList.add("input-error");
+    emailErrorMessage.classList.add("visible");
+  } else {
+    emailInput.classList.add("input-success");
+    emailInput.classList.remove("input-error");
+    emailErrorMessage.classList.remove("visible");
+  }
+}
+
+subjectInput.addEventListener("input", validateSubjectRealtime);
+function validateSubjectRealtime() {
+  if (subjectInput.value.trim().length < 15) {
+    subjectInput.classList.remove("input-success");
+    subjectInput.classList.add("input-error");
+    subjectErrorMessage.classList.add("visible");
+  } else {
+    subjectInput.classList.add("input-success");
+    subjectInput.classList.remove("input-error");
+    subjectErrorMessage.classList.remove("visible");
+  }
+}
+messageInput.addEventListener("input", validateMessageRealtime);
+function validateMessageRealtime() {
+  if (messageInput.value.trim().length < 25) {
+    messageInput.classList.remove("input-success");
+    messageInput.classList.add("input-error");
+    messageErrorMessage.classList.add("visible");
+  } else {
+    messageInput.classList.add("input-success");
+    messageInput.classList.remove("input-error");
+    messageErrorMessage.classList.remove("visible");
+  }
+}

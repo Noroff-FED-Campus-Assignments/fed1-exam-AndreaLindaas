@@ -7,14 +7,11 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0 user-scalable=0;"
     />
-    <title>Home</title>
-    <meta
-      name="description"
-      content="Welcome to the Traveller. Her you can reed about my trips around the world "
-    />
+    <title class="title">Traveller</title>
+    <meta name="description" content="Here you can reed the blogpost" />
     <link rel="stylesheet" href="css/general.css" />
-    <link rel="stylesheet" href="css/index.css" />
-    <link rel="stylesheet" href="css/carousel.css" />
+    <link rel="stylesheet" href="css/blogpost.css" />
+
     <script
       src="https://kit.fontawesome.com/a63e3bd4b5.js"
       crossorigin="anonymous"
@@ -94,32 +91,34 @@
           <a href="#" onclick="reloadPage()" class="buttons">Try again</a>
         </div>
       </div>
-      <div class="image-header"></div>
-      <div class="button-container">
-        <a href="bloglist.html" class="buttons">My travels</a>
-      </div>
 
+      <div class="image-header"></div>
+      <div class="heading">
+        <h1 class="headline"></h1>
+      </div>
       <div class="content">
-        <div class="image-text">
-          <h2>A travel blog for inspiration for others.</h2>
-          <p>
-            Travel can be one of the most inspiring experiences a person can
-            have. Whether it's exploring new cultures, immersing oneself in
-            natural landscapes, or discovering historical landmarks, travel has
-            a way of expanding one's perspective and igniting a sense of
-            curiosity and wonder.
-          </p>
-        </div>
-        <!-- This code is copied from https://codepen.io/tutsplus/pen/XWZqGgX -->
-        <section class="slider-wrapper">
-          <button class="slide-arrow" id="slide-arrow-prev">&#8249;</button>
-          <button class="slide-arrow" id="slide-arrow-next">&#8250;</button>
-          <ul class="slides-container" id="slides-container"></ul>
-        </section>
-        <div class="home-page"></div>
-        <div class="button-container read-more">
-          <a href="about.html" class="buttons">Read more</a>
-        </div>
+        <div class="post"></div>
+        <div class="modal-shadow"></div>
+        <form id="form">
+          <div class="input">
+            <label for="name">Name*</label>
+            <input type="text" name="name" id="name" required />
+          </div>
+          <div class="input">
+            <label for="email">Email*</label>
+            <input type="email" name="email" id="email" required />
+          </div>
+          <div class="input">
+            <label for="message">Message*</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <div class="blogpost-button-container">
+            <button type="submit" class="buttons">Post comment</button>
+          </div>
+          <div class="error-comment"></div>
+        </form>
+        <h2>Comments</h2>
+        <ul class="comments"></ul>
       </div>
     </main>
     <footer>
@@ -151,7 +150,6 @@
       </div>
     </footer>
     <script src="js/general.js"></script>
-    <script src="js/index.js"></script>
-    <script src="js/carousel.js"></script>
+    <script src="js/blogpost.js"></script>
   </body>
 </html>

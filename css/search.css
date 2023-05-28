@@ -1,0 +1,43 @@
+:root {
+  --black: #000;
+  --darkpurple: #913175;
+  --purple: #cd5888;
+  --grey: #e9e8e8;
+  --white: #fff;
+  --red: #f60606;
+}
+.image-header {
+  background-image: url("../media/images/circles.jpg");
+  height: 200px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.search-page .content .center-input {
+  margin-bottom: 50px;
+}
+.search-page .content input.search-input {
+  height: 30px;
+  width: 200px;
+}
+header div.input {
+  display: none;
+}
+.search-container {
+  display: grid;
+  grid-template-columns: auto 88px;
+  justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  .image-header {
+    height: 400px;
+  }
+
+  .search-page .content input.search-input {
+    height: 30px;
+    width: 300px;
+  }
+  .search-container {
+    grid-template-columns: 318px 88px;
+  }
+}

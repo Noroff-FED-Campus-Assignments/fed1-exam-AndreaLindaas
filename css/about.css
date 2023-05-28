@@ -1,0 +1,16 @@
+:root {
+  --black: #000;
+  --darkpurple: #913175;
+  --purple: #cd5888;
+  --grey: #e9e8e8;
+  --white: #fff;
+  --red: #f60606;
+}
+.about-page img {
+  max-width: 100%;
+  height: auto;
+}
+.about-page .button-container {
+  margin-top: 60px;
+  text-align: left;
+}

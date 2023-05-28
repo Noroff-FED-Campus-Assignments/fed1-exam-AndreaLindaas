@@ -1,0 +1,117 @@
+:root {
+  --black: #000;
+  --darkpurple: #913175;
+  --purple: #cd5888;
+  --grey: #e9e8e8;
+  --white: #fff;
+  --red: #f60606;
+}
+h2 {
+  margin: 30px 30px 0 30px;
+}
+.image-text {
+  margin-bottom: 30px;
+}
+.image-text h2 {
+  padding-top: 20px;
+}
+.image-text p {
+  padding: 12px;
+  margin: 0;
+}
+.home-page h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+div.image-text {
+  background-color: var(--white);
+  margin-top: 72px;
+}
+.home-page img {
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  display: block;
+}
+.home-page figcaption {
+  padding-bottom: 10px;
+}
+main div.button-container {
+  margin: -62px auto 0px;
+}
+.button-container.read-more {
+  margin: 50px;
+  position: inherit;
+  width: auto;
+}
+/*loading spinner from loading.io*/
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid black;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: black transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+
+@media screen and (min-width: 768px) {
+  div.image-text {
+    margin: 0 auto;
+    width: 500px;
+    position: absolute;
+    top: 324px;
+    left: 230px;
+    right: 0;
+  }
+  .image-text h2 {
+    padding-top: 0;
+  }
+  .image-text p {
+    padding: 24px;
+  }
+  .image-header {
+    margin-bottom: 200px;
+  }
+  .home-page {
+    display: grid;
+    grid-template-columns: 300px auto;
+    justify-content: center;
+  }
+  .home-page p {
+    margin: 0 auto 30px;
+  }
+  .home-page figure img {
+    width: 100%;
+    margin-top: 30px;
+    max-width: 400px;
+  }
+
+  main div.button-container {
+    position: absolute;
+    top: 250px;
+    margin: 0 auto;
+    width: 114px;
+    right: 0;
+    left: 230px;
+  }
+}

@@ -1,0 +1,102 @@
+:root {
+  --black: #000;
+  --darkpurple: #913175;
+  --purple: #cd5888;
+  --grey: #e9e8e8;
+  --white: #fff;
+  --red: #f60606;
+}
+
+.image-header {
+  background-image: url("../media/images/sara2.jpg");
+}
+
+span {
+  font-weight: bold;
+}
+.content form div {
+  width: 270px;
+}
+
+.content .input {
+  margin: 16px 0;
+}
+
+form .button-container {
+  margin-top: 40px;
+  text-align: left;
+}
+
+.error-messages li {
+  color: var(--red);
+  padding: 4px;
+  display: none;
+}
+
+.error-messages li.visible {
+  display: inline-block;
+}
+
+.input input.input-success,
+.input textarea.input-success {
+  border: solid 3px green;
+  outline-color: green;
+}
+
+.input input.input-error,
+.input textarea.input-error {
+  border: solid 3px var(--red);
+  outline-color: red;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 10s;
+  animation: fadeIn 1s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.modal .modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: auto;
+  text-align: center;
+}
+
+.modal .close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .modal .modal-content {
+    width: 500px;
+  }
+  #form {
+    display: grid;
+    grid-template-columns: 285px auto;
+  }
+  .error-messages li {
+    padding: 15px 0 0 0;
+  }
+  ul.error-messages {
+    padding-left: 40px;
+  }
+}

@@ -3,18 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0 user-scalable=0;"
-    />
-    <title>Home</title>
-    <meta
-      name="description"
-      content="Welcome to the Traveller. Her you can reed about my trips around the world "
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=0;" />
+    <title>Contact</title>
+    <meta name="description" content="We have great customer service." />
     <link rel="stylesheet" href="css/general.css" />
-    <link rel="stylesheet" href="css/index.css" />
-    <link rel="stylesheet" href="css/carousel.css" />
+    <link rel="stylesheet" href="css/contact.css" />
     <script
       src="https://kit.fontawesome.com/a63e3bd4b5.js"
       crossorigin="anonymous"
@@ -32,6 +25,7 @@
       rel="stylesheet"
     />
     <link rel="icon" type="image/x-icon" href="/media/favicon.ico" />
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <!-- Hotjar Tracking Code for traveller -->
     <script>
       (function (h, o, t, j, a, r) {
@@ -86,39 +80,74 @@
       </div>
     </header>
     <main>
-      <div class="error">
-        <h2>Oh no!</h2>
-        <ol></ol>
-        <p>Click the button below to reload page</p>
-        <div class="button-container">
-          <a href="#" onclick="reloadPage()" class="buttons">Try again</a>
-        </div>
-      </div>
       <div class="image-header"></div>
-      <div class="button-container">
-        <a href="bloglist.html" class="buttons">My travels</a>
-      </div>
 
+      <div class="heading">
+        <h1>Contact</h1>
+      </div>
       <div class="content">
-        <div class="image-text">
-          <h2>A travel blog for inspiration for others.</h2>
+        <div>
           <p>
-            Travel can be one of the most inspiring experiences a person can
-            have. Whether it's exploring new cultures, immersing oneself in
-            natural landscapes, or discovering historical landmarks, travel has
-            a way of expanding one's perspective and igniting a sense of
-            curiosity and wonder.
+            If you have any comments or suggestions regarding the website or any
+            of its content, please don’t hesitate to contact me.
           </p>
         </div>
-        <!-- This code is copied from https://codepen.io/tutsplus/pen/XWZqGgX -->
-        <section class="slider-wrapper">
-          <button class="slide-arrow" id="slide-arrow-prev">&#8249;</button>
-          <button class="slide-arrow" id="slide-arrow-next">&#8250;</button>
-          <ul class="slides-container" id="slides-container"></ul>
-        </section>
-        <div class="home-page"></div>
-        <div class="button-container read-more">
-          <a href="about.html" class="buttons">Read more</a>
+        <div>
+          <p>
+            You can e-mail me directly at <span>sara@traveller.com</span> or use
+            the contact form below.
+          </p>
+          <p>We do not share any of the information you provide below to any third parties. Your information is safe with us and will be deleted after 30 days.</p>
+        </div>
+        <div>
+          <form id="form" autocomplete="on">
+            <div>
+              <div class="input">
+                <label for="name">Name*</label>
+                <input type="text" name="name" id="name" required />
+              </div>
+              <div class="input">
+                <label for="email">Email*</label>
+                <input type="email" name="email" id="email" required/>
+              </div>
+              <div class="input">
+                <label for="subject">Subject*</label>
+                <input type="text" name="subject" id="subject"required />
+              </div>
+              <div class="input">
+                <label for="message">Message*</label>
+                <textarea id="message" name="message"></textarea required>
+              </div>
+              <div
+                class="g-recaptcha"
+                data-sitekey="6LelPR4mAAAAACshFU4IpvDTWb471ZWZuVEccrz0"
+              ></div>
+            </div>
+
+            <div class="error-center">
+              <ul class="error-messages">
+                <li class="errormessage-name">Name minimum 2 characthers.</li>
+                <li class="errormessage-email">Enter a valid email.</li>
+                <li class="errormessage-subject">
+                  Subject minimum 15 characthers.
+                </li>
+                <li class="errormessage-message">
+                  Message minimum 25 characthers.
+                </li>
+              </ul>
+            </div>
+
+            <div class="button-container">
+              <button type="submit" class="buttons">Send</button>
+              <button type="reset" class="reset">Clear form</button>
+            </div>
+          </form>
+        </div>
+        <div class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Form submitted successfully. Thank you!</p>
+          </div>
         </div>
       </div>
     </main>
@@ -151,7 +180,6 @@
       </div>
     </footer>
     <script src="js/general.js"></script>
-    <script src="js/index.js"></script>
-    <script src="js/carousel.js"></script>
+    <script src="js/contact.js"></script>
   </body>
 </html>
