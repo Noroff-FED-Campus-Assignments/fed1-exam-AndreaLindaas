@@ -11,7 +11,7 @@
 
 ## Report
 
-_ADD_YOUR_REPORT_HERE_
+Report delivered as a pdf file in modle
 
 ## Minimum acceptence criteria (Required - 50%)
 
